@@ -482,3 +482,29 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
+/* Video Container */
+.video-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+/* Gallery Container */
+.gallery-container {
+    margin-top: 20px;
+}
+
+.gallery-container .gallery-item {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+}
