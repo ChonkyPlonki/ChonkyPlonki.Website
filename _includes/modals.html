@@ -36,6 +36,31 @@
               </li>
               {% endif %}
             </ul>
+            <!-- Video Section -->
+            {% if post.video %}
+            <div class="video-container">
+              <h3 class="text-uppercase">Project Video</h3>
+              <video controls>
+                <source src="{{ post.video }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {% endif %}
+            <!-- Gallery Section -->
+            {% if post.gallery %}
+            <div class="gallery-container">
+              <h3 class="text-uppercase">Project Gallery</h3>
+              <div class="row">
+                {% for image in post.gallery %}
+                <div class="col-md-4">
+                  <a href="{{ image }}" class="gallery-item" data-lightbox="project-gallery-{{ post.modal-id }}">
+                    <img src="{{ image }}" class="img-fluid" alt="">
+                  </a>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>
