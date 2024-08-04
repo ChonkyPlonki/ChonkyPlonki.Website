@@ -1,7 +1,6 @@
 <!-- Portfolio Modals -->
 {% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
-  aria-hidden="true">
+<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -49,9 +48,7 @@
             {% if post.youtube-video-id %}
             <h3>{{ post.youtube-title }}</h3>
             <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             {% endif %}
             <!-- Gallery Section -->
@@ -61,15 +58,13 @@
               <div class="row">
                 {% for item in post.gallery %}
                 <div class="col-md-4">
-                  <img src="{{ item.image }}" class="img-fluid gallery-item" alt=""
-                    data-description="{{ item.description }}" onclick="expandImage(this)">
+                  <img src="{{ item.image }}" class="img-fluid gallery-item" alt="" data-description="{{ item.description }}" onclick="expandImage(this)">
                 </div>
                 {% endfor %}
               </div>
             </div>
             {% endif %}
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
         </div>
       </div>
