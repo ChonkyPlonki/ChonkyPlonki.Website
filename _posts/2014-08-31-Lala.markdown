@@ -1,5 +1,6 @@
 ---
 layout: default
+project-title: The Big Event!
 modal-id: Lalaaa
 date: 2024-08-01
 img: duck.gif
