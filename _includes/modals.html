@@ -1,6 +1,7 @@
 <!-- Portfolio Modals -->
 {% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
+  aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -34,14 +35,23 @@
               </li>
               {% endif %}
             </ul>
-            <!-- Video Section -->
-            {% if post.video %}
+            <!-- MP4 Video Section -->
+            {% if post.mp4-video %}
+            <h3>{{ post.mp4-title }}</h3>
             <div class="video-container">
-              <h3 class="text-uppercase">Project Video</h3>
               <video controls>
-                <source src="{{ post.video }}" type="video/mp4">
+                <source src="{{ post.mp4-video }}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+            </div>
+            {% endif %}
+            <!-- YouTube Video Section -->
+            {% if post.youtube-video-id %}
+            <h3>{{ post.youtube-title }}</h3>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
             {% endif %}
             <!-- Gallery Section -->
@@ -51,13 +61,15 @@
               <div class="row">
                 {% for item in post.gallery %}
                 <div class="col-md-4">
-                  <img src="{{ item.image }}" class="img-fluid gallery-item" alt="" data-description="{{ item.description }}" onclick="expandImage(this)">
+                  <img src="{{ item.image }}" class="img-fluid gallery-item" alt=""
+                    data-description="{{ item.description }}" onclick="expandImage(this)">
                 </div>
                 {% endfor %}
               </div>
             </div>
             {% endif %}
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+              Close</button>
           </div>
         </div>
       </div>

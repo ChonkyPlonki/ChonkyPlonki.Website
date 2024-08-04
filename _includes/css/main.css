@@ -483,16 +483,31 @@ footer .footer-below {
     -webkit-transform: translateZ(0);
 }
 
-/* Video Container */
+/* General Video Container */
 .video-container {
-    margin-top: 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
     margin-bottom: 20px;
-}
-
-.video-container video {
+  }
+  
+  .video-container video,
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-}
+    height: 100%;
+  }
+  
+  .modal-body h3 {
+    text-align: center;
+  }
+  
+  
 
 /* Gallery Container */
 .gallery-container {
@@ -552,5 +567,6 @@ footer .footer-below {
   .expanded-image-overlay .close-button:hover {
     background-color: #f1f1f1;
   }
+  
   
   

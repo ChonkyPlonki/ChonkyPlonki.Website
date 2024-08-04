@@ -8,10 +8,13 @@ project-date: April 2023
 client: Start Bootstrap
 category: Web Development
 description: JAJAMEN WOOAAAAH! Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-video: "vids/duck.mp4"
+mp4-title: "Project Trailer"
+mp4-video: "vids/duck.mp4"
 gallery:
   - image: "img/portfolio/cake.png"
     description: "Description for image 1"
   - image: "img/portfolio/cabin.png"
     description: "img/portfolio/cabin.png"
+youtube-video-id: "60ruvzfXQoE"
+youtube-title: "Project Trailer on YouTube Channel"
 ---
