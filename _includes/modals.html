@@ -49,9 +49,9 @@
             <div class="gallery-container">
               <h3 class="text-uppercase">Project Gallery</h3>
               <div class="row">
-                {% for image in post.gallery %}
+                {% for item in post.gallery %}
                 <div class="col-md-4">
-                  <img src="{{ image }}" class="img-fluid gallery-item" alt="" onclick="expandImage(this)">
+                  <img src="{{ item.image }}" class="img-fluid gallery-item" alt="" data-description="{{ item.description }}" onclick="expandImage(this)">
                 </div>
                 {% endfor %}
               </div>

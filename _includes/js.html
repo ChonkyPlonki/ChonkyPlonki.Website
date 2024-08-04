@@ -36,6 +36,12 @@
         expandedImage.src = imageElement.src;
         overlay.appendChild(expandedImage);
 
+        // Create the description element
+        var description = document.createElement('div');
+        description.classList.add('description');
+        description.innerHTML = imageElement.getAttribute('data-description');
+        overlay.appendChild(description);
+
         // Create the close button
         var closeButton = document.createElement('button');
         closeButton.classList.add('close-button');
