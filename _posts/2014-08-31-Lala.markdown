@@ -2,7 +2,7 @@
 layout: default
 modal-id: Lalaaa
 date: 2024-08-01
-img: cabin.png
+img: duck.gif
 alt: image-alt
 project-date: April 2003
 client: Start Bootstrap
