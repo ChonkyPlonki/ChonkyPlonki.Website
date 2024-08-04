@@ -24,3 +24,31 @@
 <!-- Disqus Stuff -->
 {% include js_disqus.html %}
 {% endif %}
+
+<script>
+    function expandImage(imageElement) {
+        // Create the overlay element
+        var overlay = document.createElement('div');
+        overlay.classList.add('expanded-image-overlay');
+
+        // Create the expanded image element
+        var expandedImage = document.createElement('img');
+        expandedImage.src = imageElement.src;
+        overlay.appendChild(expandedImage);
+
+        // Create the close button
+        var closeButton = document.createElement('button');
+        closeButton.classList.add('close-button');
+        closeButton.innerHTML = 'Close';
+        closeButton.onclick = function () {
+            document.body.removeChild(overlay);
+        };
+        overlay.appendChild(closeButton);
+
+        // Add the overlay to the body
+        document.body.appendChild(overlay);
+
+        // Show the overlay
+        overlay.style.display = 'flex';
+    }
+</script>
