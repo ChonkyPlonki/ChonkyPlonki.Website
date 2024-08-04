@@ -598,4 +598,23 @@ footer .footer-below {
     opacity: 1; /* Show the caption on hover */
     visibility: visible; /* Make sure it's visible on hover */
 }
+
+/* Ensure the image container has a 16:10 aspect ratio */
+.image-container {
+    position: relative;
+    width: 100%; /* or specific width */
+    padding-top: 62.5%; /* 10 / 16 = 0.625 or 62.5% */
+    overflow: hidden;
+    background-color: #f0f0f0; /* Optional: Background color for better visibility */
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust to ensure the image covers the container */
+  }
+  
   

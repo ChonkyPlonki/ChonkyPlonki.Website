@@ -16,9 +16,11 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-          <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
-          <div class="portfolio-caption"><h4>{{post.project-title}}</h4></div>
+          <div class="image-container">
+            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
+            <div class="portfolio-caption"><h4>{{post.project-title}}</h4></div>
+          </div>
         </a>
       </div>
       {% endfor %}
