@@ -579,7 +579,7 @@ footer .footer-below {
     border-radius: 13px;
   }
   
-  .portfolio-caption {
+.portfolio-caption {
     position: absolute;
     top: 0; /* Align the caption to the top of the image */
     left: 0;
@@ -595,17 +595,17 @@ footer .footer-below {
 }
 
 .portfolio-item:hover .portfolio-caption {
-    opacity: 1; /* Show the caption on hover */
-    visibility: visible; /* Make sure it's visible on hover */
-}
-
-/* Ensure the image container has a 16:10 aspect ratio */
-.image-container {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .image-container {
     position: relative;
-    width: 100%; /* or specific width */
-    padding-top: 62.5%; /* 10 / 16 = 0.625 or 62.5% */
+    width: 100%;
+    padding-top: 62.5%; /* 16:10 aspect ratio */
     overflow: hidden;
-    background-color: #f0f0f0; /* Optional: Background color for better visibility */
+    background-color: #f0f0f0;
+    z-index: 1; /* Ensure it is below the captions */
   }
   
   .image-container img {
@@ -614,7 +614,7 @@ footer .footer-below {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Adjust to ensure the image covers the container */
+    object-fit: cover;
+    z-index: 0; /* Ensure the image stays at the lowest level */
   }
-  
   
