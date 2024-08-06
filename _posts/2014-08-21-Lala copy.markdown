@@ -3,7 +3,7 @@ layout: default
 project-title: NEJ The Big Event!
 modal-id: Lalaaa
 date: 2024-08-01
-img: game.png
+img: "/game.png"
 alt: image-alt
 project-date: April 2003
 client: Start Bootstrap
@@ -12,7 +12,7 @@ description: J0000AJAMEN WOOAAAAH! Use this area of the page to describe your pr
 mp4-title: "Project Trailer"
 mp4-video: "vids/duck.mp4"
 gallery:
-  - image: "img/portfolio/cake.png"
+  - image: "/img/portfolio/cake.png"
     description: "Description for image 1"
   - image: "img/portfolio/cabin.png"
     description: "img/portfolio/cabin.png"
