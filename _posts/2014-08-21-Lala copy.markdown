@@ -1,7 +1,7 @@
 ---
 layout: default
 project-title: NEJ The Big Event!
-modal-id: Lalaaa
+modal-id: Lalaaa66
 date: 2024-08-01
 img: "/game.png"
 alt: image-alt
@@ -10,7 +10,7 @@ client: Start Bootstrap
 category: Web Development
 description: J0000AJAMEN WOOAAAAH! Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 mp4-title: "Project Trailer"
-mp4-video: "vids/duck.mp4"
+mp4-video: "/vids/duck.mp4"
 gallery:
   - image: "/img/portfolio/cake.png"
     description: "Description for image 1"
