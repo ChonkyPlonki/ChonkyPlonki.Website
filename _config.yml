@@ -33,6 +33,7 @@ color:
 
   secondary: 334720 #FD6E8A old: 502c38 
   secondary-dark: 141f06 #A2122F old: 31151e
+  secondary-dark-rgb: 18,52,86;
   seconfary-font-color: ffffff
 
 # Footer settings

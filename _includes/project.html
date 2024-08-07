@@ -14,18 +14,20 @@
                     <div class="project-content">
                         <!-- Info Text Column -->
                         <div class="info-column">
+                            <h4 class="info-title">Quick Info</h4>
                             <ul class="info-list">
-                                <li><strong>Project Type:<br></strong> Game</li>
-                                <li><strong>Game Engine:<br></strong> Unity Engine 2020.3.31f1</li>
-                                <li><strong>Status:<br></strong> Not Completed</li>
+                                <li><strong>Project Type:</strong> Game</li>
+                                <li><strong>Game Engine:</strong> Unity Engine 2020.3.31f1</li>
+                                <li><strong>Worked on:</strong> 2019-2021</li>
+                                <li><strong>Status:</strong> Not Completed</li>
                                 <!-- Add more details as needed -->
                             </ul>
                         </div>
                         <!-- Description Column -->
                         <div class="description-column">
                             <span class="projects-skills">
-                                Vulpion was a curious exploration game I developed over 1.5 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
-                                I overscoped and unfortunately never finished the project - but I still love it!
+                                <b>VULPION</b> is a curious exploration game I developed over 2 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
+                                I overscoped and unfortunately never finished the project - but I still love it! I may yet pick it up again.
                                 <br>
                                 <br>At the time I summarized the vision of the game as follows:
                                 <br>
@@ -56,10 +58,7 @@
                     </div>
                     <div class="image-container">
                         <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-                        <div class="portfolio-date">
-                            <h6>{{ post.project-date }}</h6>
-                        </div>
-                        <div class="portfolio-caption">
+                        <div class="project-portfolio-caption">
                             <h4>{{post.project-title}}</h4>
                         </div>
                     </div>
@@ -72,6 +71,24 @@
 </section>
 
 <style>
+
+.project-portfolio-caption {
+    position: absolute;
+    top: 0; /* Align the caption to the top of the image */
+    left: 0;
+    right: 0;
+    background-color:rgba(245, 255, 244, 0.7); /* Adjust color and transparency as needed */
+    color: #{{site.color.secondary}};
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+.project-portfolio-item:hover .portfolio-caption {
+    opacity: 1;
+    visibility: visible;
+  }
+
 /* Banner Image Styles */
 .banner-image-wrapper {
     position: relative;
@@ -145,6 +162,12 @@ header .projects-intro-text {
     padding-right: 20px; /* Space between info-column and description */
 }
 
+.info-title {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Space below the title */
+    font-weight: bold;
+}
+
 .info-list {
     padding: 0;
     margin: 0;
@@ -152,10 +175,10 @@ header .projects-intro-text {
 }
 
 .info-list li {
+    background-color: rgba(16, 51, 5, 0.1); /* Faded background with low alpha */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
     margin-bottom: 10px; /* Adjust spacing between list items */
-}
-
-.info-text {
     font-size: 1em;
     font-weight: 300;
 }
@@ -210,6 +233,7 @@ header .projects-intro-text {
         text-align: center; /* Center align text */
     }
 }
+
 </style>
 
 <script>
