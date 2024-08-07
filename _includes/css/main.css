@@ -444,6 +444,7 @@ footer .footer-below {
 }
 
 .portfolio-modal .modal-content {
+    background-color: #{{site.color.primary}}; /* Same green color */
     padding: 100px 0;
     min-height: 100%;
     border: 0;
@@ -469,7 +470,7 @@ footer .footer-below {
 
 .portfolio-modal .close-modal {
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: 25px;
     width: 75px;
     height: 75px;

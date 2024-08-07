@@ -7,15 +7,27 @@
         <div class="rl"></div>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 green-background">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="modal-header-custom">
+                  <img src="{{ site.baseurl }}{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                  <h3>{{ post.title }}</h3>
+                  <hr class="dark-green-line">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
-            <h2>{{ post.title }}</h2>
-            <hr class="star-primary">
-            <img src="{{ site.baseurl }}{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
             {% if post.description %}
-            <p>{{ post.description }}</p>
+            <p class="modal-description">{{ post.description }}</p>
             {% endif %}
             <ul class="list-inline item-details">
               {% if post.client %}
@@ -72,3 +84,59 @@
   </div>
 </div>
 {% endfor %}
+
+<style> 
+/* Extend the green background */
+.green-background {
+  background-color: #{{site.color.primary}};
+  padding: 20px 0; /* Optional: Add padding for better aesthetics */
+}
+
+/* Align the descriptive text to the left and make it wider */
+.modal-description {
+  text-align: left;
+  width: 100%; /* You can adjust this value as needed */
+  max-width: 800px; /* Set a max width for readability */
+  margin: 0 auto; /* Center align the text block */
+}
+
+/* Set the background color of the title and image section to green */
+.modal-header-custom {
+  color: #{{site.color.secondary}}; /* Ensure text is readable */
+}
+
+/* Ensure the modal content is not constrained by the bootstrap classes */
+.modal-content {
+  max-width: 100%;
+}
+
+.modal-body img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Override Bootstrap container width to make it full width */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Set the background color of the close-modal to green */
+.close-modal {
+  background-color: #{{site.color.primary}}; /* Same green color */
+}
+
+/* Add this rule at the end */
+.modal-header-custom img {
+    border-radius: 40px; /* Adjust the value to your preference */
+}
+
+/* Custom styles for the horizontal line */
+.dark-green-line {
+  border: 0;
+  height: 1px; /* Adjust height as needed */
+  background-color: #{{site.color.secondary-dark}}; /* Dark green color */
+  margin: 10px 0; /* Margin to give space around the line */
+}
+
+</style>
