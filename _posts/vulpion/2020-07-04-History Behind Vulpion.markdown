@@ -5,7 +5,7 @@ projectcategory: vulpion
 url: vulpion
 modal-id: vulpionhistory
 date: 2020-07-04
-img: /img/portfolio/vulpion/walking-2encoder.gif
+img: /img/portfolio/vul/walking-2encoder.gif
 alt: image-alt
 project-date: July 2020
 client: Start Bootstrap

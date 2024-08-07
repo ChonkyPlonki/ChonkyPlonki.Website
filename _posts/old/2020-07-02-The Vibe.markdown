@@ -4,7 +4,7 @@ project-title: The vibe
 url: vulpion
 modal-id: thingbingie
 date: 2024-08-01
-img: /img/portfolio/vulpion/walking-2encoder.gif
+img: /img/portfolio/vul/walking-2encoder.gif
 alt: image-alt
 project-date: July 2020
 client: Start Bootstrap
