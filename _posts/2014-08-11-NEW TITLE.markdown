@@ -3,7 +3,7 @@ layout: default
 project-title: NYTT NAMN!
 modal-id: Lalaaa2
 date: 2024-08-02
-img: circus.png
+img: /img/portfolio/circus.png
 alt: image-alt
 project-date: April 2003
 client: Start Bootstrap

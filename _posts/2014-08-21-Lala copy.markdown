@@ -3,7 +3,7 @@ layout: default
 project-title: NEJ The Big Event!
 modal-id: Lalaaa66
 date: 2024-08-01
-img: "/game.png"
+img: "/img/portfolio/game.png"
 alt: image-alt
 project-date: April 2003
 client: Start Bootstrap

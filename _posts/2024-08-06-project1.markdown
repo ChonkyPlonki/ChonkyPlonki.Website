@@ -2,7 +2,7 @@
 layout: project
 title: "Project Title"
 project-title: YES The Big Event!
-img: "/game.png"
+img: "/img/portfolio/game.png"
 internalurl: /vulpion
 modal-id: Lalaassa545646
 date: 2024-08-01
