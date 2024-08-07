@@ -11,21 +11,21 @@
         <div class="row">
             <div class="col-lg-19">
                 <div class="projects-intro-text">
-                    <!-- Details List Wrapper -->
-                    <div class="details-list-wrapper">
-                        <ul class="list-unstyled details-list">
-                            <li><strong>Project Type:</strong> Game</li>
-                            <li><strong>Game Engine:</strong> Unity Engine 2020.3.31f1</li>
-                            <li><strong>Status:</strong> Not Completed </li>
-                            <!-- Add more details as needed -->
-                        </ul>
-                    </div>
                     <div class="project-content">
+                        <!-- Info Text Column -->
+                        <div class="info-column">
+                            <ul class="info-list">
+                                <li><strong>Project Type:<br></strong> Game</li>
+                                <li><strong>Game Engine:<br></strong> Unity Engine 2020.3.31f1</li>
+                                <li><strong>Status:<br></strong> Not Completed</li>
+                                <!-- Add more details as needed -->
+                            </ul>
+                        </div>
                         <!-- Description Column -->
                         <div class="description-column">
                             <span class="projects-skills">
-                                <b>Vulpion</b> was a curious exploration game I developed over 1.5 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
-                                <br> I overscoped and never finished the project - but I still love it!
+                                Vulpion was a curious exploration game I developed over 1.5 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
+                                I overscoped and unfortunately never finished the project - but I still love it!
                                 <br>
                                 <br>At the time I summarized the vision of the game as follows:
                                 <br>
@@ -111,7 +111,7 @@ header .projects-container {
 
 header .projects-intro-text {
     text-align: center;
-    padding-top: 0px; /* Adjust top padding */
+    padding-top: 45px; /* Adjust top padding */
     padding-bottom: 0px; /* Adjust bottom padding */
     margin-top: 0; /* Remove any default margin */
     margin-bottom: 0; /* Remove any default margin */
@@ -132,11 +132,32 @@ header .projects-intro-text {
 /* Custom CSS to align content */
 .project-content {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the start */
     align-items: flex-start;
     position: relative;
     max-width: 1600px; /* Adjust max-width as needed */
     margin: 0 auto; /* Center the content */
+}
+
+.info-column {
+    flex: 0 0 200px; /* Fixed width for info-column */
+    text-align: left;
+    padding-right: 20px; /* Space between info-column and description */
+}
+
+.info-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.info-list li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+.info-text {
+    font-size: 1em;
+    font-weight: 300;
 }
 
 .details-list-wrapper {
@@ -169,6 +190,26 @@ header .projects-intro-text {
     text-align: center;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .info-column {
+        width: 100%; /* Full width on small screens */
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 10px; /* Reduce space below info-column */
+        text-align: center; /* Center align text */
+    }
+
+    .description-column {
+        max-width: 100%; /* Full width on small screens */
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center align text */
+    }
+}
 </style>
 
 <script>
