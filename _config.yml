@@ -27,11 +27,11 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: c4ddae #80B3FF //old: e8b0bb
-  primary-rgb: "92,21,87" # old: "128,179,255"
+  primary: caeea5 #80B3FF //old: e8b0bb
+  primary-rgb: "90,31,93" # old: "128,179,255"
   primary-font-color: 141f06
 
-  secondary: 334720 #FD6E8A old: 502c38 
+  secondary: 2b4019 #FD6E8A old: 502c38 
   secondary-dark: 141f06 #A2122F old: 31151e
   secondary-dark-rgb: 18,52,86;
   seconfary-font-color: ffffff
