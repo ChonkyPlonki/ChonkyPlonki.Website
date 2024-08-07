@@ -2,7 +2,7 @@
 <header>
     <!-- Banner Image -->
     <div class="banner-image-wrapper">
-        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/vulpion/Banner1.png');">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/vulpion/Banner2.png');">
             <!-- Logo Image -->
             <img src="{{ site.baseurl }}/img/portfolio/vulpion/BannerLogo1.png" alt="Vulpion Logo" class="banner-logo">
         </div>
@@ -11,22 +11,21 @@
         <div class="row">
             <div class="col-lg-19">
                 <div class="projects-intro-text">
-                    <!-- Details List Wrapper 
+                    <!-- Details List Wrapper -->
                     <div class="details-list-wrapper">
                         <ul class="list-unstyled details-list">
                             <li><strong>Project Type:</strong> Game</li>
                             <li><strong>Game Engine:</strong> Unity Engine 2020.3.31f1</li>
                             <li><strong>Status:</strong> Not Completed </li>
-                             Add more details as needed -->
+                            <!-- Add more details as needed -->
                         </ul>
                     </div>
-                    <h3>Description</h3>
                     <div class="project-content">
                         <!-- Description Column -->
                         <div class="description-column">
                             <span class="projects-skills">
-                                Vulpion was a curious exploration game I developed over 1.5 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
-                                <br> I overscoped and never finished the project - but I love this game!
+                                <b>Vulpion</b> was a curious exploration game I developed over 1.5 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
+                                <br> I overscoped and never finished the project - but I still love it!
                                 <br>
                                 <br>At the time I summarized the vision of the game as follows:
                                 <br>
@@ -72,50 +71,14 @@
     </div>
 </section>
 
-
-
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
-    <div class="container portfolio-flex-grid">
-        <div class="row">
-        </div>
-        <div class="portfolio-flex-row">
-            {% for post in site.posts %}
-            {% if post.projectcategory == "vulpion" %}
-            <div class="portfolio-flex-item portfolio-item">
-                <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-                        <div class="portfolio-date">
-                            <h6>{{ post.project-date }}</h6>
-                        </div>
-                        <div class="portfolio-caption">
-                            <h4>{{post.project-title}}</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-
-
-
 <style>
 /* Banner Image Styles */
 .banner-image-wrapper {
     position: relative;
     text-align: center;
-    height: 300px; /* Adjust the height as needed */
+    height: 360px; /* Adjust the height as needed */
     overflow: hidden;
+    background: #000; /* Fallback color for better visual appearance */
 }
 
 .banner-image {
@@ -123,14 +86,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Adjust to match the height of the wrapper */
-    background-size: cover; /* Cover the entire area */
+    height: 100%; /* Match the height of the wrapper */
+    background-size: cover; /* Maintain aspect ratio while covering the container */
     background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
 }
 
 .banner-logo {
     position: absolute;
-    bottom: -40px; /* Adjust to move the logo up or down */
+    bottom: -25px; /* Adjust to move the logo up or down */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     width: auto; /* Maintain aspect ratio */
@@ -138,7 +102,8 @@
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Other styles */
+/* Other styles remain unchanged */
+
 header .projects-container {
     padding-top: 0 !important; /* Override the padding-top in main.css */
     padding-bottom: 50px; /* Adjust as needed */
@@ -204,3 +169,12 @@ header .projects-intro-text {
     text-align: center;
 }
 
+</style>
+
+<script>
+    document.addEventListener('scroll', function () {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var bannerImage = document.querySelector('.banner-image');
+        bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    });
+</script>
