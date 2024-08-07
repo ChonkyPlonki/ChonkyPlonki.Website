@@ -1,31 +1,32 @@
 <!-- Project Info Section -->
 <header>
-        <!-- Banner Image -->
-        <div class="banner-image-wrapper">
-            <img src="{{ site.baseurl }}/img/portfolio/vulpion/Banner1.png" alt="Banner Image" class="banner-image">
+    <!-- Banner Image -->
+    <div class="banner-image-wrapper">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/vulpion/Banner1.png');">
+            <!-- Logo Image -->
+            <img src="{{ site.baseurl }}/img/portfolio/vulpion/BannerLogo1.png" alt="Vulpion Logo" class="banner-logo">
         </div>
-    <div class="container">
+    </div>
+    <div class="projects-container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-text">
-                    <span class="name">Vulpion</span>
-                    <hr class="star-light" />
-                    <!-- Details List Wrapper -->
+            <div class="col-lg-19">
+                <div class="projects-intro-text">
+                    <!-- Details List Wrapper 
                     <div class="details-list-wrapper">
                         <ul class="list-unstyled details-list">
                             <li><strong>Project Type:</strong> Game</li>
                             <li><strong>Game Engine:</strong> Unity Engine 2020.3.31f1</li>
                             <li><strong>Status:</strong> Not Completed </li>
-                            <!-- Add more details as needed -->
+                             Add more details as needed -->
                         </ul>
                     </div>
+                    <h3>Description</h3>
                     <div class="project-content">
                         <!-- Description Column -->
                         <div class="description-column">
-                            <h3>Description</h3>
-                            <span class="skillssmall">
-                                Vulpion was a curious exploration game I developed over 1.5 years. You played as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
-                                <br> I overscoped, unfortunately, and never finished the project - but I still love this game!
+                            <span class="projects-skills">
+                                Vulpion was a curious exploration game I developed over 1.5 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
+                                <br> I overscoped and never finished the project - but I love this game!
                                 <br>
                                 <br>At the time I summarized the vision of the game as follows:
                                 <br>
@@ -70,26 +71,97 @@
         </div>
     </div>
 </section>
-<style>
 
-    /* Custom CSS for projects header */
+
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container portfolio-flex-grid">
+        <div class="row">
+        </div>
+        <div class="portfolio-flex-row">
+            {% for post in site.posts %}
+            {% if post.projectcategory == "vulpion" %}
+            <div class="portfolio-flex-item portfolio-item">
+                <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+                        <div class="portfolio-date">
+                            <h6>{{ post.project-date }}</h6>
+                        </div>
+                        <div class="portfolio-caption">
+                            <h4>{{post.project-title}}</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+
+<style>
+/* Banner Image Styles */
+.banner-image-wrapper {
+    position: relative;
+    text-align: center;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust to match the height of the wrapper */
+    background-size: cover; /* Cover the entire area */
+    background-position: center center; /* Center the image */
+}
+
+.banner-logo {
+    position: absolute;
+    bottom: -40px; /* Adjust to move the logo up or down */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 450px; /* Adjust size if needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Other styles */
+header .projects-container {
+    padding-top: 0 !important; /* Override the padding-top in main.css */
+    padding-bottom: 50px; /* Adjust as needed */
+}
+
+header .projects-intro-text {
+    text-align: center;
+    padding-top: 0px; /* Adjust top padding */
+    padding-bottom: 0px; /* Adjust bottom padding */
+    margin-top: 0; /* Remove any default margin */
+    margin-bottom: 0; /* Remove any default margin */
+}
+
+.projects-skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+/* Custom CSS for projects header */
 .projects-container {
     padding: 0 15px; /* Adjust padding as needed */
     margin: 0 auto;
-    max-width: 1200px; /* Set max width if needed */
-}
-
-.projects-intro-text {
-    text-align: center;
-    padding-top: 20px; /* Adjust top padding */
-    padding-bottom: 20px; /* Adjust bottom padding */
-}
-
-.projects-name {
-    font-size: 3em; /* Adjust font size */
-    font-weight: bold;
-    margin-top: 0; /* Remove top margin */
-    margin-bottom: 10px; /* Adjust bottom margin */
+    max-width: 1600px; /* Set max width if needed */
 }
 
 /* Custom CSS to align content */
@@ -98,6 +170,8 @@
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    max-width: 1600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the content */
 }
 
 .details-list-wrapper {
@@ -122,7 +196,7 @@
 .description-column {
     flex: 1; /* Takes the remaining space */
     text-align: left;
-    max-width: 800px;
+    max-width: 1000px;
     padding-left: 1cm; /* Adjust the space between details and description if needed */
 }
 
@@ -130,16 +204,3 @@
     text-align: center;
 }
 
-/* Banner Image Styles */
-.banner-image-wrapper {
-    text-align: center;
-    padding-bottom: 15px; /* Adjust the padding below the banner image */
-}
-
-.banner-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px; /* Optional: Add rounded corners to the image */
-}
-
-</style>
