@@ -29,6 +29,14 @@
             {% if post.description %}
             <p class="modal-description">{{ post.description }}</p>
             {% endif %}
+            {% if post.img1 %}
+            <div class="modal-header-custom img1-container">
+              <img src="{{ site.baseurl }}{{ post.img1 }}" class="img-responsive img-centered custom-img1-size" alt="{{ post.alt }}">
+            </div>
+            {% endif %}                       
+            {% if post.description1 %}
+            <p class="modal-description">{{ post.description1 }}</p>
+            {% endif %}
             <ul class="list-inline item-details">
               {% if post.client %}
               <li>Client:
@@ -100,10 +108,6 @@
   margin: 0 auto; /* Center align the text block */
 }
 
-/* Set the background color of the title and image section to green */
-.modal-header-custom {
-  color: #{{site.color.secondary}}; /* Ensure text is readable */
-}
 
 /* Ensure the modal content is not constrained by the bootstrap classes */
 .modal-content {
@@ -121,11 +125,6 @@
   padding-right: 0;
 }
 
-/* Set the background color of the close-modal to green */
-.close-modal {
-  background-color: #{{site.color.primary}}; /* Same green color */
-}
-
 /* Add this rule at the end */
 .modal-header-custom img {
     border-radius: 40px; /* Adjust the value to your preference */
@@ -139,4 +138,16 @@
   margin: 10px 0; /* Margin to give space around the line */
 }
 
+/* Custom styles for img1 */
+.custom-img1-size {
+  max-width: 50%; /* Adjust this value to your preference */
+  width: auto;
+  height: auto;
+  margin: 0 auto; /* Center the image */
+}
+
+/* Add padding between the description and img1 */
+.img1-container {
+  padding-top: 20px; /* Adjust the value as needed for more or less space */
+}
 </style>
