@@ -62,3 +62,9 @@ defaults:
       type: "posts"
     values:
       permalink: ""
+
+collections:
+  vulpionposts:
+    output: true
+    permalink: /vulpionposts/:path/
+

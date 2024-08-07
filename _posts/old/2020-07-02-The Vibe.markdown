@@ -1,0 +1,22 @@
+---
+layout: default
+project-title: The vibe
+url: vulpion
+modal-id: thingbingie
+date: 2024-08-01
+img: vulpion/walking-2encoder.gif
+alt: image-alt
+project-date: July 2020
+client: Start Bootstrap
+category: Web Development
+description: I wanted the game to feel relaxing and a little silly, so I painted its color scheme in soft colors inspired by Swedish forests. Additionally I made the main character, the fox, very simplistically painted. Both because it's endearing and because it's easier to make more art of if needed (like simple clothes etc.)
+mp4-title: "Project Trailer"
+mp4-video: "vids/portfolio/duck.mp4"
+gallery:
+  - image: "img/portfolio/cake.png"
+    description: "Description for image 1"
+  - image: "img/portfolio/cabin.png"
+    description: "img/portfolio/cabin.png"
+youtube-video-id: "60ruvzfXQoE"
+youtube-title: "Project Trailer on YouTube Channel"
+---

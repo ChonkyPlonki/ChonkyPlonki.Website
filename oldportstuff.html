@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<body>
+    <section id="project">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2>{{ page.title }}</h2>
+              <hr class="star-primary">
+            </div>
+          </div>
+      <!-- Project Content -->
+  <section class="page-section">
+    <div class="container">
+      TITLE SHOULD BE HERE!
+      <!-- Title -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ page.title }}</h2>
+      
+      <!-- Banner Image
+      <img src="{{ site.baseurl }}{{ page.bannerimage }}" class="img-fluid mb-5" alt="Project Banner"> -->
+      
+      <!-- Line -->
+      <hr class="star-dark mb-5">
+      
+      <!-- Description and Details -->
+       DESCRIPTOIN HERE
+      <div class="row">
+        <div class="col-lg-4 ml-auto">
+          <ul class="list-unstyled">
+            {% for detail in page.details %}
+              <li><strong>{{ detail.key }}:</strong> {{ detail.value }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          {{ content }}
+        </div>
+      </div>
+      
+      <!-- Gallery -->
+       GALLERY HERE!
+      <div class="row">
+        {% for gallery_item in page.gallery %}
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="portfolio-item">
+              <a href="{{ site.baseurl }}{{ gallery_item.url }}" class="portfolio-link" data-toggle="modal">
+                <img class="img-fluid" src="{{ site.baseurl }}{{ gallery_item.thumb }}" alt="">
+                <p class="text-center">{{ gallery_item.description }}</p>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+---
+layout: project
+title: "Project Title"
+project-title: YES The Big Event!
+img: "/game.png"
+internalurl: /vulpion
+modal-id: Lalaassa545646
+date: 2024-08-01
+project-date: April 2006
+bannerimage: "/img/portfolio/cake.png"
+details:
+  - key: "Game Engine"
+    value: "Unity"
+  - key: "Contact Details"
+    value: "email@example.com"
+gallery:
+  - url: "/img/portfolio/cake.png"
+    thumb: "/img/portfolio/cake.png"
+    description: "Image Description"
+  - url: "/img/portfolio/cake.png"
+    thumb: "/img/portfolio/cake.png"
+    description: "Another Image Description"
+---
+
