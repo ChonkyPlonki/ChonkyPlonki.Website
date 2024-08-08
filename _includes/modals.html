@@ -78,7 +78,7 @@
               <div class="row">
                 {% for item in post.gallery %}
                 <div class="col-md-4">
-                  <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid gallery-item" alt="" data-description="{{ item.description }}" onclick="expandImage(this)">
+                  <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid gallery-item" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
                 </div>
                 {% endfor %}
               </div>
@@ -92,6 +92,13 @@
   </div>
 </div>
 {% endfor %}
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+    <span class="close-button">&times;</span>
+    <img class="modal-content" id="expandedScreenshot">
+    <div id="imageDescription"></div>
+</div>
 
 <style> 
 /* Extend the green background */
@@ -150,4 +157,168 @@
 .img1-container {
   padding-top: 20px; /* Adjust the value as needed for more or less space */
 }
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#imageDescription {
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Screenshot grid image hover */
+.screenshot-item img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.screenshot-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Portfolio Modal Styles */
+.portfolio-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10001; /* Ensure it's above other elements but below the screenshot modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #{{site.color.primary}}; /* Opaque green background */
+    padding-top: 60px;
+}
+
+.portfolio-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.portfolio-close-button {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Screenshot Modal Styles */
+.screenshot-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10002; /* Ensure the modal is on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    padding-top: 60px;
+}
+
+.screenshot-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.screenshot-trigger {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.screenshot-trigger:hover {
+    transform: scale(1.05);
+}
+
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Screenshot grid image hover */
+.gallery-item {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
 </style>
+
+<script>
+function expandImage(img) {
+    var modal = document.getElementById("screenshotModal");
+    var modalImg = document.getElementById("expandedScreenshot");
+    var captionText = document.getElementById("imageDescription");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+
+    var span = document.getElementsByClassName("close-button")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+}
+</script>

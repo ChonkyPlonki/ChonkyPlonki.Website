@@ -45,8 +45,9 @@
 <!-- Portfolio Grid Section -->
 <section id="portfolio">
     <div class="container portfolio-flex-grid">
-        <div class="row">
-        </div>
+        <!-- Portfolio Grid Title -->
+        <h2 class="portfolio-grid-title">Portfolio</h2>
+        <div class="row"></div>
         <div class="portfolio-flex-row">
             {% for post in site.posts %}
             {% if post.projectcategory == "vulpion" %}
@@ -71,8 +72,51 @@
     </div>
 </section>
 
-<style>
+<!-- Portfolio Modal Structure -->
+<div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
+    <div class="portfolio-modal-content">
+        <span class="portfolio-close-button">&times;</span>
+        <!-- Portfolio content goes here -->
+    </div>
+</div>
 
+<!-- Selected Screenshots Section -->
+<section class="selected-screenshots">
+    <div class="container">
+        <h2>Selected Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 3.png" alt="Screenshot 1" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 7.png" alt="Screenshot 2" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 6.png" alt="Screenshot 3" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 8.png" alt="Screenshot 4" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 4.png" alt="Screenshot 5" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 2.png" alt="Screenshot 6" class="screenshot-trigger">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+    <span class="miro-close-button">&times;</span>
+    <img class="modal-content" id="expandedScreenshot">
+    <div id="imageDescription"></div>
+</div>
+
+
+
+<style>
 .project-portfolio-caption {
     position: absolute;
     top: 0; /* Align the caption to the top of the image */
@@ -241,6 +285,190 @@ header .projects-intro-text {
     border-radius: 40px; /* Adjust the value to your preference */
 }
 
+/* Portfolio Image Styles */
+.image-container img {
+    border-radius: 40px; /* Adjust the value to your preference */
+    border: 10px solid #{{site.color.primary}}; /* Add 10px green border */
+}
+
+/* Reduce Padding Between Sections */
+#portfolio {
+    padding-bottom: 20px; /* Reduce padding below portfolio grid */
+}
+
+/* Portfolio Grid Section Title */
+.portfolio-grid-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Selected Screenshots Section */
+.selected-screenshots {
+    padding-top: 30px; /* Reduce top padding */
+    text-align: center;
+}
+
+.selected-screenshots h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.screenshot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.screenshot-item {
+    flex: 0 1 calc(50% - 20px); /* Two columns */
+    margin: 10px;
+}
+
+.screenshot-item img {
+    width: 100%;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#imageDescription {
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.miro-close-button {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.miro-close-button:hover,
+.miro-close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Screenshot grid image hover */
+.screenshot-item img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.screenshot-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Portfolio Modal Styles */
+.portfolio-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10001; /* Ensure it's above other elements but below the screenshot modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #{{site.color.primary}}; /* Opaque green background */
+    padding-top: 60px;
+}
+
+.portfolio-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.portfolio-close-button {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Screenshot Modal Styles */
+.screenshot-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10002; /* Ensure the modal is on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    padding-top: 60px;
+}
+
+.screenshot-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.screenshot-trigger {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.screenshot-trigger:hover {
+    transform: scale(1.05);
+}
+
+.miro-close-button {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.miro-close-button:hover,
+.miro-close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 </style>
 
 <script>
@@ -249,4 +477,38 @@ header .projects-intro-text {
         var bannerImage = document.querySelector('.banner-image');
         bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
     });
+
+// Portfolio Modal Logic
+document.querySelectorAll('.portfolio-link').forEach(function(element) {
+    element.addEventListener('click', function(event) {
+        event.preventDefault();
+        var modalId = this.getAttribute('href');
+        document.querySelector(modalId).style.display = 'block';
+    });
+});
+
+document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
+    element.addEventListener('click', function() {
+        this.closest('.portfolio-modal').style.display = 'none';
+    });
+});
+
+// Screenshot Modal Logic
+document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
+    element.addEventListener('click', function() {
+        var modal = document.getElementById('screenshotModal');
+        var modalImg = document.getElementById('expandedScreenshot');
+        var descriptionText = document.getElementById('imageDescription');
+
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        descriptionText.innerHTML = this.alt;
+    });
+});
+
+document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
+    document.getElementById('screenshotModal').style.display = 'none';
+});
+
+
 </script>
