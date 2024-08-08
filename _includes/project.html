@@ -7,6 +7,14 @@
             <img src="{{ site.baseurl }}/img/portfolio/vul/BannerLogo1.png" alt="Vulpion Logo" class="banner-logo">
         </div>
     </div>
+
+<!-- Embed YouTube Video -->
+<div class="video-wrapper">
+    <iframe class="responsive-video" src="https://www.youtube.com/embed/fHFSVmhWYvI" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
     <div class="projects-container">
         <div class="row">
             <div class="col-lg-19">
@@ -44,7 +52,34 @@
     </div>
 </header>
 
-<!-- Portfolio Grid Section -->
+<!-- Selected Screenshots Section (Moved here) -->
+<section class="selected-screenshots">
+    <div class="container">
+        <h2>Selected Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 3.png" alt="Screenshot 1" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 7.png" alt="Screenshot 2" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 6.png" alt="Screenshot 3" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 8.png" alt="Screenshot 4" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 4.png" alt="Screenshot 5" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 2.png" alt="Screenshot 6" class="screenshot-trigger">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid Section (Moved after screenshots) -->
 <section id="portfolio">
     <div class="container portfolio-flex-grid">
         <!-- Portfolio Grid Title -->
@@ -82,39 +117,47 @@
     </div>
 </div>
 
-<!-- Selected Screenshots Section -->
-<section class="selected-screenshots">
-    <div class="container">
-        <h2>Selected Screenshots</h2>
-        <div class="screenshot-grid">
-            <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 3.png" alt="Screenshot 1" class="screenshot-trigger">
-            </div>
-            <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 7.png" alt="Screenshot 2" class="screenshot-trigger">
-            </div>
-            <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 6.png" alt="Screenshot 3" class="screenshot-trigger">
-            </div>
-            <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 8.png" alt="Screenshot 4" class="screenshot-trigger">
-            </div>
-            <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 4.png" alt="Screenshot 5" class="screenshot-trigger">
-            </div>
-            <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 2.png" alt="Screenshot 6" class="screenshot-trigger">
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Screenshot Modal Structure -->
 <div id="screenshotModal" class="screenshot-modal">
     <span class="miro-close-button">&times;</span>
     <img class="modal-content" id="expandedScreenshot">
     <div id="imageDescription"></div>
 </div>
+
+<style>
+/* Video Wrapper Styles */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+/* Responsive Video Styles */
+.responsive-video {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    max-width: 1000px; /* Maximum width for large screens */
+    border: 10px solid white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* For responsiveness, make sure the iframe scales properly */
+@media (max-width: 1024px) {
+    .responsive-video {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-video {
+        max-width: 100%;
+    }
+}
+
+
+</style>
 
 <script>
     document.addEventListener('scroll', function () {
@@ -123,35 +166,35 @@
         bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
     });
 
-// Portfolio Modal Logic
-document.querySelectorAll('.portfolio-link').forEach(function(element) {
-    element.addEventListener('click', function(event) {
-        event.preventDefault();
-        var modalId = this.getAttribute('href');
-        document.querySelector(modalId).style.display = 'block';
+    // Portfolio Modal Logic
+    document.querySelectorAll('.portfolio-link').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var modalId = this.getAttribute('href');
+            document.querySelector(modalId).style.display = 'block';
+        });
     });
-});
 
-document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
-    element.addEventListener('click', function() {
-        this.closest('.portfolio-modal').style.display = 'none';
+    document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
+        element.addEventListener('click', function() {
+            this.closest('.portfolio-modal').style.display = 'none';
+        });
     });
-});
 
-// Screenshot Modal Logic
-document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
-    element.addEventListener('click', function() {
-        var modal = document.getElementById('screenshotModal');
-        var modalImg = document.getElementById('expandedScreenshot');
-        var descriptionText = document.getElementById('imageDescription');
+    // Screenshot Modal Logic
+    document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var modal = document.getElementById('screenshotModal');
+            var modalImg = document.getElementById('expandedScreenshot');
+            var descriptionText = document.getElementById('imageDescription');
 
-        modal.style.display = 'block';
-        modalImg.src = this.src;
-        descriptionText.innerHTML = this.alt;
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            descriptionText.innerHTML = this.alt;
+        });
     });
-});
 
-document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
-    document.getElementById('screenshotModal').style.display = 'none';
-});
+    document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
+        document.getElementById('screenshotModal').style.display = 'none';
+    });
 </script>
