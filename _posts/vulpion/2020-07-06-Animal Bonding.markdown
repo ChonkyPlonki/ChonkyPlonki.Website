@@ -4,7 +4,7 @@ project-title: Animal Bonding
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpionanimal
-date: 2020-07-02
+date: 2020-07-06
 img: /img/portfolio/vul/apologyblast.gif
 alt: image-alt
 description: There was also a plan to add tea-making mechanics into the game. This ended up being cut, but is really cute! I made lots of art for this too. Added some screenshots below.

@@ -4,7 +4,7 @@ project-title: Water and Swimming Mechanics
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpionswimming
-date: 2020-07-04
+date: 2020-07-09
 img: /img/portfolio/vul/swimming.gif
 alt: image-alt
 description: |

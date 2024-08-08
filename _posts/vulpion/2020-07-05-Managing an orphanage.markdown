@@ -4,7 +4,7 @@ project-title: Managing an Orphanage
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpionorphanage
-date: 2020-07-04
+date: 2020-03-04
 img: /img/portfolio/vul/hulda-gnodima-orphanstats-feels.jpg
 alt: image-alt
 description: This game was a one woman passion project that began in September 2019. I had for a couple of years been obsessed with making a game that reflected a healthy society, modeled a little after current Scandinavian social systems. I wanted to portray a civilization with ample access to free mental health care professionals, focus on inclusivity, free education, welfare programs and compassionate leadership. <br>

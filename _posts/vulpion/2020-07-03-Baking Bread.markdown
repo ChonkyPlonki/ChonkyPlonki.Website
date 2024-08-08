@@ -4,7 +4,7 @@ project-title: Baking Bread
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpionbakingbread
-date: 2020-07-04
+date: 2020-07-05
 img: /img/portfolio/vul/makingBread.gif
 alt: image-alt
 description: I wanted to include a baking bread mini-game into the game and used Unity's 2DAnimation tool to connect a dough-like image to bones that the player could manipulate into shapes they liked. The idea was to allow the player to custom beautiful bread, cook it in their oven and feed it to friends in the game at parties. Below you'll find some of the concept art I painted for the baking and cooking mechanics. I believe this could've been a cute game in and of itself.

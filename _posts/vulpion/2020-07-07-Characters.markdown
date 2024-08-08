@@ -4,7 +4,7 @@ project-title: Characters
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpioncharacters
-date: 2020-07-02
+date: 2020-07-07
 img: /img/portfolio/vul/MostBeautyFox.png
 alt: image-alt
 description: There was also a plan to add tea-making mechanics into the game. This ended up being cut, but is really cute! I made lots of art for this too. Added some screenshots below.
