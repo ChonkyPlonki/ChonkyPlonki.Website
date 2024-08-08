@@ -414,10 +414,19 @@ header .projects-intro-text {
     margin: 0 auto; /* Center the image */
   }
   
-  /* Add padding between the description and img1 */
-  .img1-container {
+/* Adjust padding between the description and img1 */
+.img1-container {
     padding-top: 20px; /* Adjust the value as needed for more or less space */
-  }
+    text-align: center; /* Center the image within its container */
+}
+
+/* Make the img1 wider */
+.img1-container img {
+    width: auto; /* Make the image take the full width of its container */
+    max-width: 80%; /* Ensure it doesn't exceed the container's width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
   
   /* Modal Styles */
   .modal {
