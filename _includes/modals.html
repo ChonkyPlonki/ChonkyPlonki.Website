@@ -27,8 +27,9 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body">
             {% if post.description %}
-            <p class="modal-description">{{ post.description }}</p>
+            <div class="modal-description">{{ post.description | markdownify }}</div>
             {% endif %}
+            
             {% if post.img1 %}
             <div class="modal-header-custom img1-container">
               <img src="{{ site.baseurl }}{{ post.img1 }}" class="img-responsive img-centered custom-img1-size" alt="{{ post.alt }}">
@@ -74,7 +75,7 @@
             <!-- Gallery Section -->
             {% if post.gallery %}
             <div class="gallery-container">
-              <h3 class="text-uppercase">Project Gallery</h3>
+              <h3 class="text-uppercase">Gallery</h3>
               <div class="row">
                 {% for item in post.gallery %}
                 <div class="col-md-4">
@@ -101,209 +102,6 @@
 </div>
 
 <style> 
-/* Extend the green background */
-.green-background {
-  background-color: #{{site.color.primary}};
-  padding: 20px 0; /* Optional: Add padding for better aesthetics */
-}
-
-/* Align the descriptive text to the left and make it wider */
-.modal-description {
-  text-align: left;
-  width: 100%; /* You can adjust this value as needed */
-  max-width: 800px; /* Set a max width for readability */
-  margin: 0 auto; /* Center align the text block */
-}
-
-
-/* Ensure the modal content is not constrained by the bootstrap classes */
-.modal-content {
-  max-width: 100%;
-}
-
-.modal-body img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* Override Bootstrap container width to make it full width */
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* Add this rule at the end */
-.modal-header-custom img {
-    border-radius: 40px; /* Adjust the value to your preference */
-}
-
-/* Custom styles for the horizontal line */
-.dark-green-line {
-  border: 0;
-  height: 1px; /* Adjust height as needed */
-  background-color: #{{site.color.secondary-dark}}; /* Dark green color */
-  margin: 10px 0; /* Margin to give space around the line */
-}
-
-/* Custom styles for img1 */
-.custom-img1-size {
-  max-width: 50%; /* Adjust this value to your preference */
-  width: auto;
-  height: auto;
-  margin: 0 auto; /* Center the image */
-}
-
-/* Add padding between the description and img1 */
-.img1-container {
-  padding-top: 20px; /* Adjust the value as needed for more or less space */
-}
-
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
-    padding-top: 60px;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-}
-
-#imageDescription {
-    text-align: center;
-    color: #ccc;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.close-button {
-    position: absolute;
-    top: 30px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Screenshot grid image hover */
-.screenshot-item img {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.screenshot-item img:hover {
-    transform: scale(1.05);
-}
-
-/* Portfolio Modal Styles */
-.portfolio-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 10001; /* Ensure it's above other elements but below the screenshot modal */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: #{{site.color.primary}}; /* Opaque green background */
-    padding-top: 60px;
-}
-
-.portfolio-modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-}
-
-.portfolio-close-button {
-    position: absolute;
-    top: 30px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Screenshot Modal Styles */
-.screenshot-modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 10002; /* Ensure the modal is on top of everything */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
-    padding-top: 60px;
-}
-
-.screenshot-modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-}
-
-.screenshot-trigger {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.screenshot-trigger:hover {
-    transform: scale(1.05);
-}
-
-.close-button {
-    position: absolute;
-    top: 30px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Screenshot grid image hover */
-.gallery-item {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
 
 </style>
 

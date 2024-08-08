@@ -84,7 +84,7 @@ header .projects-intro-text {
 }
 
 .info-column {
-    flex: 0 0 200px; /* Fixed width for info-column */
+    flex: 0 0 220px; /* Fixed width for info-column */
     text-align: left;
     padding-right: 20px; /* Space between info-column and description */
     padding-left: 10px;
@@ -175,6 +175,7 @@ header .projects-intro-text {
 
 /* Reduce Padding Between Sections */
 #portfolio {
+    margin-top: 10px; /* Reduce the space above the "More" section */
     padding-bottom: 20px; /* Reduce padding below portfolio grid */
 }
 
@@ -188,6 +189,7 @@ header .projects-intro-text {
 /* Selected Screenshots Section */
 .selected-screenshots {
     padding-top: 30px; /* Reduce top padding */
+    padding-bottom: 0px; /* Decrease padding at the bottom */
     text-align: center;
 }
 
@@ -236,10 +238,15 @@ header .projects-intro-text {
 }
 
 #imageDescription {
+    margin: 15px auto;
+    padding: 10px 20px;
+    max-width: 80%; /* Restrict width */
+    background-color: rgba(34, 139, 34, 0.8); /* Dark green opaque background */
+    border-radius: 10px; /* Rounded corners */
+    color: white;
     text-align: center;
-    color: #ccc;
     font-size: 16px;
-    margin-top: 10px;
+    line-height: 1.5;
 }
 
 .miro-close-button {
@@ -370,6 +377,9 @@ header .projects-intro-text {
   /* Ensure the modal content is not constrained by the bootstrap classes */
   .modal-content {
     max-width: 100%;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
   }
   
   .modal-body img {

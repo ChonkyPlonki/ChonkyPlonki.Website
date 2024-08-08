@@ -24,20 +24,19 @@
                         <div class="info-column">
                             <h4 class="info-title">Quick Info</h4>
                             <ul class="info-list">
+                                <li><strong>Project link:</strong> <a href="https://github.com/ChonkyPlonki/Vulpion" target="_blank" style="color: white; font-weight: bold;">Github</a></li>
                                 <li><strong>Project Type:</strong> Game</li>
                                 <li><strong>Role:</strong> Solo project</li>
-                                <li><strong>Worked on:</strong> 2019-2021</li>
-                                <li><strong>Game Engine:</strong> Unity Engine</li>
+                                <li><strong>Game Engine:</strong> Unity</li>
                                 <li><strong>Status:</strong> Not Completed</li>
-                                <li><strong>Project link:</strong> <a href="https://github.com/ChonkyPlonki/Vulpion" target="_blank" style="color: white; font-weight: bold;">Github</a></li>
                                 <!-- Add more details as needed -->
                             </ul>
                         </div>
                         <!-- Description Column -->
                         <div class="description-column">
                             <span class="projects-skills">
-                                <b>VULPION</b> is a curious exploration game I developed over 2 years. You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
-                                I overscoped and unfortunately never finished the project - but I still love it! 
+                                <b>VULPION</b> is a curious exploration game I developed over 2 years (between 2019 and 2021). You play as a "Vulp", a fox-like person that dropped into the world "naked, compassionate and free".
+                                I overscoped and unfortunately never finished the project - but I love the project dearly! 
                                 <br>
                                 <br>I may yet pick it up again, but at the time I summarized the vision of the game as follows:
                                 <br>
@@ -55,7 +54,7 @@
 <!-- Selected Screenshots Section (Moved here) -->
 <section class="selected-screenshots">
     <div class="container">
-        <h2>Selected Screenshots</h2>
+        <h2 class="section-title">Selected Screenshots</h2>
         <div class="screenshot-grid">
             <div class="screenshot-item">
                 <img src="{{ site.baseurl }}/img/portfolio/vul/Screenshot 3.png" alt="Screenshot 1" class="screenshot-trigger">
@@ -79,7 +78,7 @@
     </div>
 </section>
 
-<!-- Portfolio Grid Section (Moved after screenshots) -->
+<!-- Portfolio Grid Section -->
 <section id="portfolio">
     <div class="container portfolio-flex-grid">
         <!-- Portfolio Grid Title -->
@@ -109,6 +108,8 @@
     </div>
 </section>
 
+
+
 <!-- Portfolio Modal Structure -->
 <div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
     <div class="portfolio-modal-content">
@@ -125,12 +126,13 @@
 </div>
 
 <style>
-/* Video Wrapper Styles */
-.video-wrapper {
+
+  /* Video Wrapper Styles */
+  .video-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0; /* Adjust padding as needed */
+    padding: 40px 0 0px 0; /* Adjust padding as needed */
 }
 
 /* Responsive Video Styles */
@@ -138,7 +140,7 @@
     aspect-ratio: 16 / 10;
     width: 100%;
     max-width: 1000px; /* Maximum width for large screens */
-    border: 10px solid white;
+    border: 10px solid #{{site.color.secondary-dark}};
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -155,6 +157,18 @@
         max-width: 100%;
     }
 }
+
+/* Hover effect for icons in the "MORE" section */
+.portfolio-flex-item .image-container img {
+    transition: transform 0.3s ease-in-out;
+    background-color: #{{site.color.secondary}}; /* Dark green background color */
+}
+
+.portfolio-flex-item .image-container img:hover {
+    transform: scale(1.1); /* Adjust the scaling factor as needed */
+}
+
+
 
 
 </style>
