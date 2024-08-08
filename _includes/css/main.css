@@ -63,7 +63,7 @@ hr.star-light {
 }
 
 hr.star-light:after {
-    color: #{{ site.color. }};
+    color: #{{ site.color.secondary }};
     background-color: #{{ site.color.primary }};
 }
 
