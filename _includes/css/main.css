@@ -569,7 +569,7 @@ footer .footer-below {
     justify-content: center;
     padding: 20px; /* Add padding to avoid clipping */
     overflow: auto; /* Allow scrolling if the content exceeds viewport height */
-    z-index: 9999;
+    z-index: 10999;
   }
   
   .expanded-image-overlay img {
