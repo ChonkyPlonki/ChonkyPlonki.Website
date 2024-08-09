@@ -25,8 +25,8 @@ img1: /img/portfolio/vul/layers.jpg
 gallery:
   - image: "/img/portfolio/vul/walking-2encoder.gif"
     description: "I wanted the edge of the water to look soft, so I made translucent sprites with a wave shader to portray a soft water edge. You can see this in the gif where the edge of the water slowly roles against the grass."
-  - image: "/img/portfolio/vul/swimanim.gif"
-    description: "This is a gif of as I was animating the player's underwater swimming animation. The animations are done with Unity's 2DAnimation tool, it's awesome!"
+  - image: "/img/portfolio/vul/swimming2.gif"
+    description: "This is a gif of as I was animating the player's underwater swimming animation. The animations are done with Unity's 2DAnimation tool, it's awesome! Here I am also testing the equipment system by equipping a skirt 'under water'"
   - image: "/img/portfolio/vul/Using Heightmap trying at least.gif"
     description: 
      Because the game is in 2D and I didn't want to use 3D terrain I needed to figure out a way to have the player 'sink' into the water as the player walks out into it. I ended up using a heightmap (that's hidden to the player) that pushes the player's position up or down depending on if it's walking over white on the height map (up) or black (down). In the gif above you can see the Vulp-player bump up and down depending on the color of the texture it."
