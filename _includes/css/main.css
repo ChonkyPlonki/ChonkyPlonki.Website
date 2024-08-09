@@ -107,12 +107,11 @@ header .intro-text .name {
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
 }
 
-header .intro-text .skillss {
-    font-size: 1.25em;
-    font-weight: 300;
-}
 
 .project{
     text-align: center;
@@ -650,3 +649,14 @@ footer .footer-below {
     z-index: 0; /* Ensure the image stays at the lowest level */
   }
   
+  .custom-link-pink {
+    color: #ea656a;
+    font-weight: bold;
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+.custom-link-pink:hover {
+    color: #9f0a38;
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+

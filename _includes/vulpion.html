@@ -82,7 +82,7 @@
 <section id="portfolio">
     <div class="container portfolio-flex-grid">
         <!-- Portfolio Grid Title -->
-        <h2 class="portfolio-grid-title">More</h2>
+        <h2 class="portfolio-grid-title">More About Vulpion</h2>
         <div class="row"></div>
         <div class="portfolio-flex-row">
             {% for post in site.posts %}
@@ -126,48 +126,6 @@
 </div>
 
 <style>
-
-  /* Video Wrapper Styles */
-  .video-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0px 0; /* Adjust padding as needed */
-}
-
-/* Responsive Video Styles */
-.responsive-video {
-    aspect-ratio: 16 / 10;
-    width: 100%;
-    max-width: 1000px; /* Maximum width for large screens */
-    border: 10px solid #{{site.color.secondary-dark}};
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* For responsiveness, make sure the iframe scales properly */
-@media (max-width: 1024px) {
-    .responsive-video {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    .responsive-video {
-        max-width: 100%;
-    }
-}
-
-/* Hover effect for icons in the "MORE" section */
-.portfolio-flex-item .image-container img {
-    transition: transform 0.3s ease-in-out;
-    background-color: #{{site.color.secondary}}; /* Dark green background color */
-}
-
-.portfolio-flex-item .image-container img:hover {
-    transform: scale(1.1); /* Adjust the scaling factor as needed */
-}
-
 
 
 

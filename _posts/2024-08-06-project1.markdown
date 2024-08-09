@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: vulpion
 title: "Project Title"
 project-title: YES The Big Event!
 img: "/img/portfolio/game.png"

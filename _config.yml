@@ -4,7 +4,16 @@ email: chonkyplonki@gmail.com
 url: https://github.com/jeromelachaud/freelancer-theme
 description: "Chonky Plonki's website - I make art and games!"
 keywords: "ChonkyPlonki, Chonky Plonky, game developer, artist, sculptur, art, games, portfolio"
-skills: "I love coding (NEW INFO HERE DID IT UPDATE?), making games and art 🎀"
+skills: "Gentle greetings 😊
+ <br>
+ <br>I love coding, hammering at tech, making games and art 🎀 
+ <br> 
+ <br>On this website I've collected projects I've done and been a part of.  
+ <br>Feel free to have a look at them in the <a href='https://chonkyplonki.github.io/ChonkyPlonki.Website/portfolio/' class='custom-link-pink'>Portfolio</a>. 
+ <br>You can also contact me any time, you'll find my contact details in <a href='https://chonkyplonki.github.io/ChonkyPlonki.Website/contact/' class='custom-link-pink'>Contact</a>. 
+ <br>
+ <br> All the best, hope you have a gentle day! 🐸
+ " 
 baseurl: "/ChonkyPlonki.Website"
 url: "https://chonkyplonki.github.io" # the base hostname & protocol for your site
 meta_author: LastName FirstName
@@ -38,7 +47,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Chonky Plonki
   location: Location
   social: Around the Web
   credits: Credits
@@ -47,13 +56,15 @@ footer:
 social:
   - title: github
     url: https://github.com/ChonkyPlonki
+  - title: youtube
+    url: https://www.youtube.com/@ChonkyPlonki
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Somewhere in the North
+  - line: Scandinavia
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: 'This website was based on the Freelancer Github Templates. Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
 # Build settings
 markdown: kramdown
@@ -65,10 +76,6 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: ""
+      author: "chonkyplonki"
 
-collections:
-  vulpionposts:
-    output: true
-    permalink: /vulpionposts/:path/
 
