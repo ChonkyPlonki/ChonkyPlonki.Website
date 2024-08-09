@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body id="page-top" class="index">
+    {% include nav.html %}
+
+    <!-- New green contact section with extra margin -->
+    <section id="contact"
+        style="background-color: #{{site.color.primary}}; color: #{{site.color.secondary}}; padding: 60px 0; text-align: center; margin-top: 60px; min-height: 800px;">
+
+        <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+            <img src="{{ site.baseurl }}/img/profile.png" alt="Contact Image"
+                style="width: 100px; height: auto; margin-bottom: 20px;">
+            <h2 style="margin-bottom: 30px;">Contact Details</h2>
+
+            <p class="center-align">You can contact me via the email below.</p>
+
+            <p class="center-align"><b>Email: chonkyplonki@gmail.com</b></p>
+
+            <!-- Centered Image -->
+            <div class="image-container">
+                <img src="{{ site.baseurl }}/img/portfolio/vul/relaxingVulpion.gif" alt="Additional Image">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .left-align {
+            text-align: left;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+</body>
+
+</html>
