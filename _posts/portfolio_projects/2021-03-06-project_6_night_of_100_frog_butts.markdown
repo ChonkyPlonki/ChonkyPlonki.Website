@@ -1,0 +1,10 @@
+---
+project-title: Night of 100 Frog Butts
+projectcategory: portfolio
+img: "/nightof100frogbutts/mainmenu.png"
+internalurl: /nightof100frogbutts
+modal-id: nightof100frogbuttsportfolio
+date: 2021-03-10
+project-date: March 2021
+---
+
