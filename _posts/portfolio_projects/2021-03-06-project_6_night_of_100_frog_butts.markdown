@@ -1,5 +1,5 @@
 ---
-project-title: Night of 100 Frog Butts
+project-title: Night of a 100 Frog Butts
 projectcategory: portfolio
 img: "/nightof100frogbutts/mainmenu.png"
 internalurl: /nightof100frogbutts

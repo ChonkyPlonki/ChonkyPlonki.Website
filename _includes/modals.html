@@ -72,19 +72,22 @@
               <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             {% endif %}
-            <!-- Gallery Section -->
-            {% if post.gallery %}
-            <div class="gallery-container">
-              <h3 class="text-uppercase">Gallery With Further Details</h3>
-              <div class="row">
-                {% for item in post.gallery %}
-                <div class="col-md-4">
-                  <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid gallery-item" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-            {% endif %}
+<!-- Gallery Section -->
+{% if post.gallery %}
+<div class="custom-gallery-container">
+  <h3 class="text-uppercase">Gallery With Further Details</h3>
+  <div class="row">
+    {% for item in post.gallery %}
+    <div class="col-md-4">
+      <div class="custom-gallery-item">
+        <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
         </div>
@@ -100,3 +103,39 @@
     <img class="modal-content" id="expandedScreenshot">
     <div id="imageDescription"></div>
 </div>
+
+<style>
+
+/* Custom Gallery Container */
+.custom-gallery-container {
+    margin: 20px 0;
+}
+
+/* Custom Gallery Item */
+.custom-gallery-item {
+    padding: 5px;
+    position: relative;
+    overflow: visible; /* Allow the image to overflow when expanded */
+    border-radius: 40px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom Gallery Image */
+.custom-gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px; /* Rounded corners */
+    aspect-ratio: 16 / 10; /* Ensures 16:10 aspect ratio */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* Change cursor to pointer (hand) on hover directly over the image */
+}
+
+/* Hover Effect */
+.custom-gallery-img:hover {
+    transform: scale(1.1); /* Expands image on hover */
+}
+
+</style>
