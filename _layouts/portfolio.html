@@ -6,11 +6,17 @@
     {% include nav.html %}
 
   <!-- Portfolio Section -->
-  <section style="background-color: #{{site.color.primary}}; color: #{{site.color.secondary}}; padding-top: 50px 0; text-align: center; margin-top: 50px;">
-    <div class="container">
-      <h2>Projects</h2>
-      <p>You’ll find my projects below.</p>
+  <section style="background-color: #{{site.color.primary}}; color: #{{site.color.secondary}}; padding-top: 50px 0; text-align: center; margin-top: 30px; margin-bottom: -100px;">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Projects</h2>
+        <hr class="star-dark">
+      </div>
     </div>
+    <div class="container">
+      <p class="intro-text">You’ll find my projects below. ⭐</p>
+    </div>
+    
   </section>
 
     {{ content }}
@@ -25,3 +31,11 @@
 
 </html>
 
+<style>
+  /* Style for the paragraph with the intro-text class */
+.intro-text {
+  margin-bottom: -50px; /* Adjust this value as needed */
+  /* Alternatively, you can use padding-bottom if that suits better */
+}
+
+</style>

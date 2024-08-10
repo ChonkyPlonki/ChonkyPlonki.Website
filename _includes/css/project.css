@@ -176,7 +176,7 @@ header .projects-intro-text {
 /* Reduce Padding Between Sections */
 #portfolio {
     margin-top: 10px; /* Reduce the space above the "More" section */
-    padding-bottom: 20px; /* Reduce padding below portfolio grid */
+    padding-bottom: 0px; /* Reduce padding below portfolio grid */
 }
 
 /* Portfolio Grid Section Title */
