@@ -138,4 +138,21 @@
     transform: scale(1.1); /* Expands image on hover */
 }
 
+/* Custom styling for the close button */
+.btn.btn-default {
+    background-color: #{{site.color.secondary}}; /* Dark green color */
+    color: white; /* Ensure the text is visible on the dark green background */
+    border-color: #{{site.color.secondary}}; /* Optional: Set the border color to match the background */
+}
+
+/* Hover effect for the close button */
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active {
+    background-color: #{{site.color.secondary}}; /* A slightly darker green for the hover state */
+    border-color: #{{site.color.secondary}}; /* Matching border color on hover */
+    color: white; /* Keep the text white on hover */
+}
+
+
 </style>
