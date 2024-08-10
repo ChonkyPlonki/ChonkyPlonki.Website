@@ -80,9 +80,12 @@
     {% for item in post.gallery %}
     <div class="col-md-4">
       <div class="custom-gallery-item">
+        <div class="image-label">IMAGE</div>
         <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
       </div>
     </div>
+    
+     
     {% endfor %}
   </div>
 </div>
@@ -106,36 +109,63 @@
 
 <style>
 
-/* Custom Gallery Container */
-.custom-gallery-container {
-    margin: 20px 0;
-}
-
 /* Custom Gallery Item */
 .custom-gallery-item {
-    padding: 5px;
     position: relative;
-    overflow: visible; /* Allow the image to overflow when expanded */
     border-radius: 40px; /* Rounded corners */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 /* Custom Gallery Image */
 .custom-gallery-img {
     width: 100%;
     height: auto;
-    border-radius: 40px; /* Rounded corners */
+    border-radius: inherit; /* Inherit the rounded corners from the container */
     aspect-ratio: 16 / 10; /* Ensures 16:10 aspect ratio */
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer; /* Change cursor to pointer (hand) on hover directly over the image */
+}
+
+/* Image Label Styling */
+.image-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    color: #{{site.color.secondary}}; /* Dark green text color */
+    padding: 15px 0; /* Increase padding to add height to the label */
+    text-align: center; /* Center the text */
+    font-weight: bold;
+    font-size: 17px;
+    border-top-left-radius: 40px; /* Match the rounded corners */
+    border-top-right-radius: 40px; /* Match the rounded corners */
+    z-index: 1;
+    pointer-events: none; /* Ensure the label doesn’t interfere with image clicks */
+    box-sizing: border-box;
 }
 
 /* Hover Effect */
-.custom-gallery-img:hover {
-    transform: scale(1.1); /* Expands image on hover */
+.custom-gallery-item:hover {
+    transform: scale(1.1); /* Expands the entire container on hover */
 }
+
+/* Custom styling for the close button */
+.btn.btn-default {
+    background-color: #{{site.color.secondary}}; /* Dark green color */
+    color: white; /* Ensure the text is visible on the dark green background */
+    border-color: #{{site.color.secondary}}; /* Optional: Set the border color to match the background */
+}
+
+/* Hover effect for the close button */
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active {
+    background-color: #{{site.color.secondary}}; /* A slightly darker green for the hover state */
+    border-color: #{{site.color.secondary}}; /* Matching border color on hover */
+    color: white; /* Keep the text white on hover */
+}
+
 
 </style>
