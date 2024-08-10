@@ -80,7 +80,7 @@
     {% for item in post.gallery %}
     <div class="col-md-4">
       <div class="custom-gallery-item">
-        <div class="image-label">IMAGE</div>
+        <div class="image-label">{{item.label}}</div>
         <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
       </div>
     </div>
@@ -138,13 +138,15 @@
     padding: 15px 0; /* Increase padding to add height to the label */
     text-align: center; /* Center the text */
     font-weight: bold;
-    font-size: 17px;
+    font-size: 14px;
     border-top-left-radius: 40px; /* Match the rounded corners */
     border-top-right-radius: 40px; /* Match the rounded corners */
     z-index: 1;
     pointer-events: none; /* Ensure the label doesn’t interfere with image clicks */
     box-sizing: border-box;
+    text-transform: uppercase; /* Make the text uppercase */
 }
+
 
 /* Hover Effect */
 .custom-gallery-item:hover {
