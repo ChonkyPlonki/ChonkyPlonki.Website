@@ -1,6 +1,7 @@
 ---
 project-title: Night of a 100 Frog Butts
 projectcategory: portfolio
+order: 1
 img: "/nightof100frogbutts/mainmenu.png"
 internalurl: /nightof100frogbutts
 modal-id: nightof100frogbuttsportfolio

@@ -43,6 +43,7 @@ color:
   secondary: 2b4019 #FD6E8A old: 502c38 
   secondary-dark: 141f06 #A2122F old: 31151e
   secondary-dark-rgb: 18,52,86;
+  secondary-dark-rgb-transparent: 18,52,86,0.6;
   seconfary-font-color: ffffff
 
 # Footer settings

@@ -1,14 +1,52 @@
+<!-- Featured Projects Section -->
+<section id="featured">
+  <div class="container portfolio-flex-grid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h3 style="margin-bottom: 30px; margin-top: 30px;">⭐ Featured</h3>
+      </div>
+    </div>
+    <div class="portfolio-flex-row">
+      {% for post in site.portfolioposts %}
+      {% if post.featured == true %}
+      <div class="portfolio-flex-item portfolio-item">
+        <a href="{{ post.internalurl | prepend: site.baseurl }}" class="portfolio-link">
+          <div class="caption">
+            <div class="caption-content">
+              <!-- Optional: Add icons here -->
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            {% if post.getonsteam %}
+            <div class="steam-badge">
+              <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
+              <span class="steam-text">Get On Steam</span>
+            </div>
+            {% endif %}
+            <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
+            <div class="portfolio-caption"><h4>{{ post.project-title }}</h4></div>
+          </div>
+          
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- Portfolio Grid Section -->
 <section id="portfolio">
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 style="margin-bottom: 30px;">Games and Code</h3>
+        <h3 style="margin-bottom: 30px; margin-top: -110px;">🎮 Games and Code</h3>
       </div>
     </div>
     <div class="portfolio-flex-row">
-      {% for post in site.portfolioposts %}
-      {% if post.projectcategory == "portfolio" %}
+      {% assign sorted_posts = site.portfolioposts | where: "projectcategory", "portfolio" | sort: 'order' | reverse %}
+      {% for post in sorted_posts %}
       <div class="portfolio-flex-item portfolio-item">
         <a href="{{ post.internalurl | prepend: site.baseurl }}" class="portfolio-link">
           <div class="caption">
@@ -23,11 +61,11 @@
           </div>
         </a>
       </div>
-      {% endif %}
       {% endfor %}
     </div>
   </div>
 </section>
+
 
 
 
@@ -36,7 +74,7 @@
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 style="margin-bottom: 30px; margin-top: -80px;">Other work</h3>
+        <h3 style="margin-bottom: 30px; margin-top: -80px;">🎨 Other work</h3>
       </div>
     </div>
     <div class="portfolio-flex-row">
@@ -63,3 +101,55 @@
   </div>
 </section>
 
+<style>
+
+.image-container {
+  position: relative;
+}
+
+.steam-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(8, 36, 1, 0.6); /* Dark green transparent background */
+  padding: 10px 15px; /* Increase padding on the right */
+  min-width: 150px; /* Ensures a minimum width, adjust as needed */
+  border-radius: 30px; /* Rounded corners */
+}
+
+
+.steam-logo {
+  width: 24px; /* Maintain size */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 24px; /* Ensure it doesn't exceed this size */
+  margin-left: 108px; /* Space between logo and text */
+  margin-top: 9px; /* Space between logo and text */
+  border: none; /* Remove any unwanted borders */
+  outline: none; /* Ensure no outline */
+  box-shadow: none; /* Remove shadow if present */
+  background-color: transparent; /* Ensure there's no background */
+}
+
+.steam-text {
+  color: #fff;
+  font-size: 14px; /* Adjust size as needed */
+  margin: 0; /* Ensure no extra margin */
+}
+
+/* Ensure this comes after your other CSS file or is more specific */
+.steam-badge .steam-logo {
+  width: 24px; /* Ensure the correct size */
+  height: auto;
+  background-color: transparent; /* Ensure transparency */
+}
+
+.steam-badge img {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+
+
+</style>

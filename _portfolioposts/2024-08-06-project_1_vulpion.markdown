@@ -1,6 +1,7 @@
 ---
 project-title: Vulpion
 projectcategory: portfolio
+featured: true
 img: "/vul/fortwitter3.png"
 internalurl: /vulpion
 modal-id: vulpionportfolio

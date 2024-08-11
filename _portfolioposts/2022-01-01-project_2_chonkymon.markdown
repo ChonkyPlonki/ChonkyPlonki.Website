@@ -1,6 +1,8 @@
 ---
 project-title: Chonkymon
 projectcategory: portfolio
+featured: true
+order: 2
 img: "/chonkymon/MainCapsule.png"
 internalurl: /chonkymon
 modal-id: chonkymonportfolio

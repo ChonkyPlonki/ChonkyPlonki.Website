@@ -175,7 +175,7 @@ header .projects-intro-text {
 
 /* Reduce Padding Between Sections */
 #portfolio {
-    margin-top: 10px; /* Reduce the space above the "More" section */
+    margin-top: -20px; /* Reduce the space above the "More" section */
     padding-bottom: 0px; /* Reduce padding below portfolio grid */
 }
 
@@ -624,7 +624,7 @@ header .projects-intro-text {
 /* Hover effect for icons in the "MORE" section */
 .portfolio-flex-item .image-container img {
     transition: transform 0.3s ease-in-out;
-    background-color: #{{site.color.secondary}}; /* Dark green background color */
+    background-color: transparent; /* Dark green background color */
 }
 
 .portfolio-flex-item .image-container img:hover {
