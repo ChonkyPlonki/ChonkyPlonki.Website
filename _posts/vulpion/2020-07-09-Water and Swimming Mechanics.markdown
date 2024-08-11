@@ -39,4 +39,7 @@ gallery:
   - image: "/img/portfolio/vul/forest fauna.jpg"
     label: Alternative color scheme
     description: "In one biome I wanted the water to have this deep green almost brownish color that reminds me of Swedish rich forests. I find this color scheme for cozy forests rarely used in games/media - but I find it so beautiful and calming! This image is concept art I made for that type of water for Vulpion."
+  - image: "/img/portfolio/vul/earlydivingconcept.png"
+    label: Early Diving Concept
+    description: This is one of the earliest sketches I made of how the water diving could/would look."
 ---

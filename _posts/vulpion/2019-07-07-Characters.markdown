@@ -37,4 +37,10 @@ gallery:
   - image: "/img/portfolio/vul/Finding sad Baba.jpg"
     label: Baba
     description: "This is Baba. The player was supposed to find him crying as his baby was missing in a forest fire. The player was supposed to help him reunite with his baby, and welcoming him to move into your home to help them rebuild."
+  - image: "/img/portfolio/vul/Boatv2REFERENCE-SMALL.png"
+    label: Papiv
+    description: "This is a Papiv, they transport Vulps across water. Papiv's and Vulps have a symbiotic relationship."
+  - image: "/img/portfolio/vul/Bumbuzzle.png"
+    label: Bumbuzzle
+    description: "This shows where the character Bumbuzzle lives. They are into conspiracies and have found a path to the inside of the Grand Gathering, something no one else knows about. Bumbuzzle decides to live inside there."
 ---
