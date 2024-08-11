@@ -19,10 +19,10 @@
           <div class="image-container">
             <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
             {% if post.getonsteam %}
-            <div class="steam-badge">
-              <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
-              <span class="steam-text">Get On Steam</span>
-            </div>
+              <a href="{{ post.steamurl }}" class="steam-badge" target="_blank">
+                <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
+                <span class="steam-text">Get On Steam</span>
+              </a>
             {% endif %}
             <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
             <div class="portfolio-caption"><h4>{{ post.project-title }}</h4></div>
@@ -56,6 +56,12 @@
           </div>
           <div class="image-container">
             <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            {% if post.getonsteam %}
+            <div class="steam-badge">
+              <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
+              <span class="steam-text">Get On Steam</span>
+            </div>
+            {% endif %}
             <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
             <div class="portfolio-caption"><h4>{{ post.project-title }}</h4></div>
           </div>
@@ -90,6 +96,12 @@
           </div>
           <div class="image-container">
             <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            {% if post.getonsteam %}
+            <div class="steam-badge">
+              <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
+              <span class="steam-text">Get On Steam</span>
+            </div>
+            {% endif %}
             <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
             <div class="portfolio-caption"><h4>{{ post.project-title }}</h4></div>
           </div>

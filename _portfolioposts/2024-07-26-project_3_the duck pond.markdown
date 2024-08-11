@@ -3,6 +3,7 @@ project-title: The Duck Pond
 projectcategory: portfolio
 featured: true
 getonsteam: true
+steamurl: https://store.steampowered.com/app/3067180/The_Duck_Pond/
 img: "/theduckpond/616x353 RATIO_cut_and_smaller.png"
 internalurl: /theduckpond
 modal-id: theduckpondportfolio
