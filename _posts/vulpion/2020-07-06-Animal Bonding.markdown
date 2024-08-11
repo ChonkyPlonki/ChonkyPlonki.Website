@@ -28,4 +28,7 @@ gallery:
   - image: "/img/portfolio/vul/fightingsystem-skills.jpg"
     label: Sketch of Bonding Actions
     description: "This is a sketch I made of various bonding actions the player could do. It was hard to conceptualize making subtle relationship-actions we do in a visually strong way that would fit in a game, I especially struggled with the 'vulnerability'. I orginally played with the idea of including very unhealthy behaviours (such as the murder-skill or dominance skill) so the player could chose and explore various behaviours. But I decided against it, it didn't feel right!"
+  - image: "/img/portfolio/vul/Skillsv1Explenation.jpg"
+    label: Bonding Skills details
+    description: "This image shows the bonding skills explained together with a skill-UI concept."
 ---

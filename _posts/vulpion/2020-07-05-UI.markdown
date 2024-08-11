@@ -7,7 +7,21 @@ modal-id: vulpionui
 date: 2020-06-04
 img: /img/portfolio/vul/uiShow.gif
 alt: image-alt
-description: This game was a one woman passion project that began in September 2019. I had for a couple of years been obsessed with making a game that reflected a healthy society, modeled a little after current Scandinavian social systems. I wanted to portray a civilization with ample access to free mental health care professionals, focus on inclusivity, free education, welfare programs and compassionate leadership. <br>
-img1: /img/portfolio/vul/together1.jpg
-description1: The idea was to explore the difficulties and excitements in such societies, despite the ample support systems. To dive into (from my perspective) a mostly untapped genre - games that focus on solving conflicts we encounter every day in more behaviourally realistic, non-violent ways. <br> <br>What can we do to feel included? How do we bond socially with others? How can we help someone who is unwell while also taking care of ourselves? Which way can we handle our interpersonal conflicts? These are very difficult questions with complicated and nuanced answers. Therefore, they're such interesting concepts to explore in games to me! 💚
+description: For the UI I wanted to make it sparkly and fox-themed. So I added furry-edges to it, the scroll wheel is fur that will puff up when you scroll it 'against the hair-direction' etc. I also made sparkly gems as UI category buttons because I image foxes would like sparkly treasures.
+gallery:
+  - image: "/img/portfolio/vul/hulda-gnodima-testingequipment.jpg"
+    label: Equipment UI
+    description: "This is the sketch I made for how I wanted to setup the final equipment UI."
+  - image: "/img/portfolio/vul/Adenture Log - Sketch2.jpg"
+    label: Journal UI
+    description: "This is the final design of the Journal UI. I was considering adding stickers and cute images when journal entries completed."
+  - image: "/img/portfolio/vul/Adenture Log - Sketch7.jpg"
+    label: Scrap Book Journaling
+    description: "This is how I envisioned and sketched what the journal would look like when you completed quests."
+  - image: "/img/portfolio/vul/Customize PAW.jpg"
+    label: Paw Character Customization
+    description: "This is and example of the character customization where you customized your paws. You can look at the Character Customization section for more images."
+  - image: "/img/portfolio/vul/hulda-gnodima-orphanstats-feels.jpg"
+    label: Baby Villager Management UI
+    description: "This is and example of the UI that relates to managing the babies you take care of, making sure they feel OK. You can look at the Manage Orphanage section for more images."
 ---
