@@ -7,28 +7,25 @@ modal-id: vulpioncharacters
 date: 2020-07-07
 img: /img/portfolio/vul/characters.png
 alt: image-alt
-description: There was also a plan to add tea-making mechanics into the game. This ended up being cut, but is really cute! I made lots of art for this too. Added some screenshots below.
+description: I made various characters for Vulpion. I wanted to make a mix of Vulp and human characters. One of my favorite characters I made was the bejewled Vulp in the middle, he was supposed to be the most beautiful Vulp in all of Vulpion and perform songs in the starting city every Saturday.
 gallery-name: "Tea Making Concept art"
 gallery:
-  - image: "/img/portfolio/vul/NPCFennic2.jpg"
-    label: Water Edge
-    description: "There was also a plan to add general food making at some point. This was cut."
-  - image: "/img/portfolio/vul/workinonomneandplonks.png"
-    label: Water Edge
-    description: "This is a couple in Vulpion. They are an alien species and have shapes across their nose and cheeks. I specifically wanted to make an alien desirable female couple that had 'alien' features that don't make them 'more' conventionally attractive. I've often found that alien woman that are portrayed in positive lights get 'alien features' that make them 'more conventionally attractive'. Taller, thinner waists, abnormally large eyes (like avatar) etc. So I wanted to go against that!"
-  - image: "/img/portfolio/vul/Pampering Orphans - Example.jpg"
-    label: Water Edge
-    description: "Finally, because I love the cozyness of tea I thought to add the ability to make tea magic! This is concept art for that"
-  - image: "/img/portfolio/vul/Painting ffoxy.jpg"
-    label: Water Edge
-    description: "Finally, because I love the cozyness of tea I thought to add the ability to make tea magic! This is concept art for that"
   - image: "/img/portfolio/vul/PlayerSitting5GLOW.png"
-    label: Water Edge
-    description: "Finally, because I love the cozyness of tea I thought to add the ability to make tea magic! This is concept art for that"
+    label: The Player's Vulp
+    description: "This is the main Vulp character, the player. She drops from the sky and lands unconcious in the oceans. Luckily, passing Vulpion governmental ship spots her and takes her to land."
+  - image: "/img/portfolio/vul/NPCFennic2.jpg"
+    label: Fennic
+    description: "This is Fennic. She is the first Vulp to welcome you into Vulpion as you step onto land. She's based on the Fennec Fox."
+  - image: "/img/portfolio/vul/Painting ffoxy.jpg"
+    label: How the character are constructed
+    description: "The character consists of a couple of separate sprites seen in the image above. Each part is then connected via bones using Unity's 2dAnimation and then animation to walk, run, swim etc."
   - image: "/img/portfolio/vul/ESiCQWjWkAAY_Ma.jpg"
-    label: Water Edge
-    description: "Finally, because I love the cozyness of tea I thought to add the ability to make tea magic! This is concept art for that"    
+    label: Facial Expressions
+    description: "This is a sketch of Vulps' facial expressions in dialogs"    
   - image: "/img/portfolio/vul/npcs uppradade.jpg"
-    label: Water Edge
-    description: "Finally, because I love the cozyness of tea I thought to add the ability to make tea magic! This is concept art for that"    
+    label: Character sketches
+    description: "This is an overview of character sketches I made for the game. I used references of various fox-type to make the different fox-characters."    
+  - image: "/img/portfolio/vul/workinonomneandplonks.png"
+    label: Omne and Plonks, a couple
+    description: "This is a couple in Vulpion. They are an alien species and have shapes across their nose and cheeks. I specifically wanted to make an alien desirable female couple that had 'alien' features that don't make them 'more' conventionally attractive. I've often found that alien woman that are portrayed in positive lights get 'alien features' that make them 'more conventionally attractive'. Taller, thinner waists, abnormally large eyes (like avatar) etc. So I wanted to go against that!"
 ---
