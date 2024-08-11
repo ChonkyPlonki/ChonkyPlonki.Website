@@ -4,7 +4,7 @@ project-title: Character Customization
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpioncharactercustomization
-date: 2020-06-10
+date: 2020-07-07
 img: /img/portfolio/vul/hulda-gnodima-stats-customization-concept-with-opals.jpg
 alt: image-alt
 description: I am a little obsessed with customization and worked to implement extensive body and clothing customization into the game. See more details below.
