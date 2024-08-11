@@ -1,6 +1,8 @@
 <!-- Portfolio Modals -->
 {% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+{% if post.category != 'portfolio' %}
+<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
+  aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -29,12 +31,13 @@
             {% if post.description %}
             <div class="modal-description">{{ post.description | markdownify }}</div>
             {% endif %}
-            
+
             {% if post.img1 %}
             <div class="modal-header-custom img1-container">
-              <img src="{{ site.baseurl }}{{ post.img1 }}" class="img-responsive img-centered custom-img1-size" alt="{{ post.alt }}">
+              <img src="{{ site.baseurl }}{{ post.img1 }}" class="img-responsive img-centered custom-img1-size"
+                alt="{{ post.alt }}">
             </div>
-            {% endif %}                       
+            {% endif %}
             {% if post.description1 %}
             <p class="modal-description">{{ post.description1 }}</p>
             {% endif %}
@@ -69,41 +72,46 @@
             {% if post.youtube-video-id %}
             <h3>{{ post.youtube-title }}</h3>
             <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
             {% endif %}
-<!-- Gallery Section -->
-{% if post.gallery %}
-<div class="custom-gallery-container">
-  <h3 class="text-uppercase">Gallery With Further Details</h3>
-  <div class="row">
-    {% for item in post.gallery %}
-    <div class="col-md-4">
-      <div class="custom-gallery-item">
-        <div class="image-label">{{item.label}}</div>
-        <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
-      </div>
-    </div>
-    
-     
-    {% endfor %}
-  </div>
-</div>
-{% endif %}
+            <!-- Gallery Section -->
+            {% if post.gallery %}
+            <div class="custom-gallery-container">
+              <h3 class="text-uppercase">Gallery With Further Details</h3>
+              <div class="row">
+                {% for item in post.gallery %}
+                <div class="col-md-4">
+                  <div class="custom-gallery-item">
+                    <div class="image-label">{{item.label}}</div>
+                    <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img"
+                      alt="{{ item.description }}" data-description="{{ item.description }}"
+                      onclick="expandImage(this)">
+                  </div>
+                </div>
 
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+              Close</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+{% endif %}
 {% endfor %}
 
 <!-- Screenshot Modal Structure -->
 <div id="screenshotModal" class="screenshot-modal">
-    <span class="close-button">&times;</span>
-    <img class="modal-content" id="expandedScreenshot">
-    <div id="imageDescription"></div>
+  <span class="close-button">&times;</span>
+  <img class="modal-content" id="expandedScreenshot">
+  <div id="imageDescription"></div>
 </div>
-

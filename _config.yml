@@ -78,4 +78,12 @@ defaults:
     values:
       author: "chonkyplonki"
 
+collections:
+  portfolioposts:
+    output: true
+
+
+
+
+
 
