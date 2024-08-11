@@ -32,6 +32,12 @@
               <span class="steam-text">See On Steam</span>
             </a>
             {% endif %}
+            {% if post.onitch %}
+            <a href="{{ post.steamurl }}" class="steam-badge" target="_blank">
+              <img src="{{ site.baseurl }}/img/itchicon.png" alt="Itch Logo" class="steam-logo">
+              <span class="steam-text">See on Itch</span>
+            </a>
+            {% endif %}
             <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
             <div class="portfolio-caption"><h4>{{ post.project-title }}</h4></div>
           </div>
@@ -75,6 +81,12 @@
             <a href="{{ post.steamurl }}" class="steam-badge" target="_blank">
               <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
               <span class="steam-text">See On Steam</span>
+            </a>
+            {% endif %}
+            {% if post.onitch %}
+            <a href="{{ post.steamurl }}" class="steam-badge" target="_blank">
+              <img src="{{ site.baseurl }}/img/itchicon.png" alt="Itch Logo" class="steam-logo">
+              <span class="steam-text">Play on Itch</span>
             </a>
             {% endif %}
             <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
