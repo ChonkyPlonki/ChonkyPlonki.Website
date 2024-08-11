@@ -27,8 +27,11 @@ gallery:
     label: Water Edge
     description: "I wanted the edge of the water to look soft, so I made translucent sprites with a sin-wave shader to portray a soft water edge. You can see this in the gif where the edge of the water slowly rolls against the grass."
   - image: "/img/portfolio/vul/swimming2.gif"
-    label: Swim Animation
+    label: Horizontal Swim Animation
     description: "This is a gif of as I was animating the player's underwater swimming animation. The animations are done with Unity's 2DAnimation tool, it's awesome! Here I am also testing the equipment system by equipping a skirt 'under water'"
+  - image: "/img/portfolio/vul/swimanim.gif"
+    label: Vertical Swim Animation
+    description: "This gif shows the process as I was animating the player swimming when they point upwards."
   - image: "/img/portfolio/vul/Using Heightmap trying at least.gif"
     label: How walking into water works
     description: 
