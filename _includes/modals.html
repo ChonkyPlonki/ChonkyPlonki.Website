@@ -80,9 +80,12 @@
     {% for item in post.gallery %}
     <div class="col-md-4">
       <div class="custom-gallery-item">
+        <div class="image-label">{{item.label}}</div>
         <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img" alt="{{ item.description }}" data-description="{{ item.description }}" onclick="expandImage(this)">
       </div>
     </div>
+    
+     
     {% endfor %}
   </div>
 </div>
@@ -104,55 +107,10 @@
     <div id="imageDescription"></div>
 </div>
 
+<script>
+
+  
+</script>
 <style>
-
-/* Custom Gallery Container */
-.custom-gallery-container {
-    margin: 20px 0;
-}
-
-/* Custom Gallery Item */
-.custom-gallery-item {
-    padding: 5px;
-    position: relative;
-    overflow: visible; /* Allow the image to overflow when expanded */
-    border-radius: 40px; /* Rounded corners */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Custom Gallery Image */
-.custom-gallery-img {
-    width: 100%;
-    height: auto;
-    border-radius: 40px; /* Rounded corners */
-    aspect-ratio: 16 / 10; /* Ensures 16:10 aspect ratio */
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer; /* Change cursor to pointer (hand) on hover directly over the image */
-}
-
-/* Hover Effect */
-.custom-gallery-img:hover {
-    transform: scale(1.1); /* Expands image on hover */
-}
-
-/* Custom styling for the close button */
-.btn.btn-default {
-    background-color: #{{site.color.secondary}}; /* Dark green color */
-    color: white; /* Ensure the text is visible on the dark green background */
-    border-color: #{{site.color.secondary}}; /* Optional: Set the border color to match the background */
-}
-
-/* Hover effect for the close button */
-.btn.btn-default:hover,
-.btn.btn-default:focus,
-.btn.btn-default:active {
-    background-color: #{{site.color.secondary}}; /* A slightly darker green for the hover state */
-    border-color: #{{site.color.secondary}}; /* Matching border color on hover */
-    color: white; /* Keep the text white on hover */
-}
-
 
 </style>

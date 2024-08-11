@@ -176,7 +176,7 @@ header .projects-intro-text {
 /* Reduce Padding Between Sections */
 #portfolio {
     margin-top: 10px; /* Reduce the space above the "More" section */
-    padding-bottom: 20px; /* Reduce padding below portfolio grid */
+    padding-bottom: -50px; /* Reduce padding below portfolio grid */
 }
 
 /* Portfolio Grid Section Title */
@@ -630,5 +630,68 @@ header .projects-intro-text {
 .portfolio-flex-item .image-container img:hover {
     transform: scale(1.1); /* Adjust the scaling factor as needed */
 }
+
+
+
+/* Custom Gallery Item */
+.custom-gallery-item {
+    position: relative;
+    border-radius: 40px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Custom Gallery Image */
+.custom-gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: inherit; /* Inherit the rounded corners from the container */
+    aspect-ratio: 16 / 10; /* Ensures 16:10 aspect ratio */
+    object-fit: cover;
+}
+
+/* Image Label Styling */
+.image-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    color: #{{site.color.secondary}}; /* Dark green text color */
+    padding: 15px 0; /* Increase padding to add height to the label */
+    text-align: center; /* Center the text */
+    font-weight: bold;
+    font-size: 14px;
+    border-top-left-radius: 40px; /* Match the rounded corners */
+    border-top-right-radius: 40px; /* Match the rounded corners */
+    z-index: 1;
+    pointer-events: none; /* Ensure the label doesn’t interfere with image clicks */
+    box-sizing: border-box;
+    text-transform: uppercase; /* Make the text uppercase */
+}
+
+
+/* Hover Effect */
+.custom-gallery-item:hover {
+    transform: scale(1.1); /* Expands the entire container on hover */
+}
+
+/* Custom styling for the close button */
+.btn.btn-default {
+    background-color: #{{site.color.secondary}}; /* Dark green color */
+    color: white; /* Ensure the text is visible on the dark green background */
+    border-color: #{{site.color.secondary}}; /* Optional: Set the border color to match the background */
+}
+
+/* Hover effect for the close button */
+.btn.btn-default:hover,
+.btn.btn-default:focus,
+.btn.btn-default:active {
+    background-color: #{{site.color.secondary}}; /* A slightly darker green for the hover state */
+    border-color: #{{site.color.secondary}}; /* Matching border color on hover */
+    color: white; /* Keep the text white on hover */
+}
+
 
 

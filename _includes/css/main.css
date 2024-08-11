@@ -37,6 +37,7 @@ h6 {
 }
 
 hr.star-light,
+hr.star-dark,
 hr.star-primary {
     margin: 25px auto 35px;
     padding: 0;
@@ -48,6 +49,7 @@ hr.star-primary {
 }
 
 hr.star-light:after,
+hr.star-dark:after,
 hr.star-primary:after {
     content: "\f005";
     display: inline-block;
@@ -75,6 +77,16 @@ hr.star-primary:after {
     color: #{{ site.color.secondary }};
     background-color: #fff;
 }
+
+hr.star-dark {
+    border-color: #{{ site.color.secondary }};
+}
+
+hr.star-dark:after {
+    color: #{{ site.color.secondary }};
+    background-color: #{{site.color.primary}};
+}
+
 
 .img-centered {
     margin: 0 auto;
@@ -155,14 +167,14 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 15px 0;
+        padding: 10px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+        font-size: 1.5em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
