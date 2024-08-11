@@ -5,7 +5,7 @@ projectcategory: vulpion
 url: vulpion
 modal-id: vulpioncharactercustomization
 date: 2020-07-07
-img: /img/portfolio/vul/hulda-gnodima-stats-customization-concept-with-opals.jpg
+img: /img/portfolio/vul/stats-customization-concept-with-opals.jpg
 alt: image-alt
 description: I am a little obsessed with customization and worked to implement extensive body and clothing customization into the game. See more details below.
 gallery:
@@ -21,7 +21,7 @@ gallery:
   - image: "/img/portfolio/vul/Customize PAW.jpg"
     label: Customize Paws
     description: "This is the UI for customizing the player's Vulp's paws."
-  - image: "/img/portfolio/vul/hulda-gnodima-stats-customization-concept-with-opals.jpg"
+  - image: "/img/portfolio/vul/stats-customization-concept-with-opals.jpg"
     label: Customize Skills
     description: "This is the UI for customizing the player's Vulp's stats. You would put small gems into containers to symbolize which skills you were most profficient in."
   - image: "/img/portfolio/vul/bagrotation.gif" 

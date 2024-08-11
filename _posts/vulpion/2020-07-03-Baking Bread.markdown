@@ -9,19 +9,19 @@ img: /img/portfolio/vul/makingBread.gif
 alt: image-alt
 description: I wanted to include a baking bread mini-game into the game and used Unity's 2DAnimation tool to connect a dough-like image to bones that the player could manipulate into shapes they liked. The idea was to allow the player to custom beautiful bread, cook it in their oven and feed it to friends in the game at parties. Below you'll find some of the concept art I painted for the baking and cooking mechanics. I believe this could've been a cute game in and of itself.
 gallery:
-  - image: "/img/portfolio/vul/hulda-gnodima-breadmaking-3.jpg"
+  - image: "/img/portfolio/vul/breadmaking-3.jpg"
     label: Roll dough
     description: "First the player rolled the dough"
-  - image: "/img/portfolio/vul/hulda-gnodima-breadmaking-5.jpg"
+  - image: "/img/portfolio/vul/breadmaking-5.jpg"
     label: Cut patterns 
     description: "Then the player is free to cut shapes and patterns into the bread"
-  - image: "/img/portfolio/vul/hulda-gnodima-breadmaking-7.jpg"
+  - image: "/img/portfolio/vul/breadmaking-7.jpg"
     label: Bake in Oven
     description: "Then it was time to put the bread into the oven"
-  - image: "/img/portfolio/vul/hulda-gnodima-breadmaking-8.jpg"
+  - image: "/img/portfolio/vul/breadmaking-8.jpg"
     label: Take out of oven  
     description: "When the bread had baked enough the player took it out"
-  - image: "/img/portfolio/vul/hulda-gnodima-breadmaking-9.jpg"
+  - image: "/img/portfolio/vul/breadmaking-9.jpg"
     label: Name Bread
     description: "Finally the player named their bread"
   - image: "/img/portfolio/vul/Holding small bread - Serving it to people.jpg"

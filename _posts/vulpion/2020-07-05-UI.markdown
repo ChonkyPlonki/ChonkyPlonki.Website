@@ -9,7 +9,7 @@ img: /img/portfolio/vul/uiShow.gif
 alt: image-alt
 description: For the UI I wanted to make it sparkly and fox-themed. So I added furry-edges to it, the scroll wheel is fur that will puff up when you scroll it 'against the hair-direction' etc. I also made sparkly gems as UI category buttons because I image foxes would like sparkly treasures.
 gallery:
-  - image: "/img/portfolio/vul/hulda-gnodima-testingequipment.jpg"
+  - image: "/img/portfolio/vul/testingequipment.jpg"
     label: Equipment UI
     description: "This is the sketch I made for how I wanted to setup the final equipment UI."
   - image: "/img/portfolio/vul/Adenture Log - Sketch2.jpg"
@@ -21,7 +21,7 @@ gallery:
   - image: "/img/portfolio/vul/Customize PAW.jpg"
     label: Paw Character Customization
     description: "This is and example of the character customization where you customized your paws. You can look at the Character Customization section for more images."
-  - image: "/img/portfolio/vul/hulda-gnodima-orphanstats-feels.jpg"
+  - image: "/img/portfolio/vul/orphanstats-feels.jpg"
     label: Baby Villager Management UI
     description: "This is and example of the UI that relates to managing the babies you take care of, making sure they feel OK. You can look at the Manage Orphanage section for more images."
 ---
