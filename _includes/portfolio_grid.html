@@ -3,11 +3,13 @@
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 style="margin-bottom: 30px; margin-top: 30px;">⭐ Featured</h3>
+        <h3 style="margin-bottom: 50px; margin-top: 50px;">⭐ Featured</h3>
       </div>
     </div>
     <div class="portfolio-flex-row">
-      {% for post in site.portfolioposts %}
+      {% assign filtered_posts = site.portfolioposts | where: "projectcategory", "portfolio" %}
+      {% assign sorted_posts = filtered_posts | sort: 'featuredorder' %}      
+      {% for post in sorted_posts %}
       {% if post.featured == true %}
       <div class="portfolio-flex-item portfolio-item">
         <a href="{{ post.internalurl | prepend: site.baseurl }}" class="portfolio-link">
@@ -52,7 +54,7 @@
       </div>
     </div>
     <div class="portfolio-flex-row">
-      {% assign sorted_posts = site.portfolioposts | where: "projectcategory", "portfolio" | sort: 'order' | reverse %}
+      {% assign sorted_posts = site.portfolioposts | where: "projectcategory", "portfolio" | sort: "date" | reverse %}
       {% for post in sorted_posts %}
       <div class="portfolio-flex-item portfolio-item">
         <a href="{{ post.internalurl | prepend: site.baseurl }}" class="portfolio-link">
@@ -91,7 +93,7 @@
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 style="margin-bottom: 30px; margin-top: -80px;">🎨 Other work</h3>
+        <h3 style="margin-bottom: 30px; margin-top: -110px;">🎨 Other work</h3>
       </div>
     </div>
     <div class="portfolio-flex-row">

@@ -1,5 +1,6 @@
 ---
 project-title: Chonkymon
+featuredorder: 2
 projectcategory: portfolio
 featured: true
 order: 2

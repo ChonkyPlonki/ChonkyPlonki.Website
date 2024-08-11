@@ -1,5 +1,6 @@
 ---
 project-title: The Duck Pond
+featuredorder: 1
 projectcategory: portfolio
 featured: true
 getonsteam: true
