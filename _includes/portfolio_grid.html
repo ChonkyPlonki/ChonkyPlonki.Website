@@ -42,8 +42,9 @@
   </div>
 </section>
 
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
+
+<!-- Featured Projects Section -->
+<section id="featured">
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -57,29 +58,33 @@
         <a href="{{ post.internalurl | prepend: site.baseurl }}" class="portfolio-link">
           <div class="caption">
             <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
+              <!-- Optional: Add icons here -->
             </div>
           </div>
           <div class="image-container">
             <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
             {% if post.getonsteam %}
-            <div class="steam-badge">
+              <a href="{{ post.steamurl }}" class="steam-badge" target="_blank">
+                <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
+                <span class="steam-text">Get On Steam</span>
+              </a>
+            {% endif %}
+            {% if post.seeonsteam %}
+            <a href="{{ post.steamurl }}" class="steam-badge" target="_blank">
               <img src="{{ site.baseurl }}/img/steamicon.png" alt="Steam Logo" class="steam-logo">
-              <span class="steam-text">Get On Steam</span>
-            </div>
+              <span class="steam-text">See On Steam</span>
+            </a>
             {% endif %}
             <div class="portfolio-date"><h6>{{ post.project-date }}</h6></div>
             <div class="portfolio-caption"><h4>{{ post.project-title }}</h4></div>
           </div>
+          
         </a>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
-
-
-
 
 <!-- Ensure no extra elements are within your new section -->
 <section id="other-work">
