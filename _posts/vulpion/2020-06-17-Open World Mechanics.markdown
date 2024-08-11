@@ -7,7 +7,7 @@ modal-id: vulpionopenworld
 date: 2020-06-17
 img: /img/portfolio/vul/openWorldTry0.gif
 alt: image-alt
-description: This game was a one woman passion project that began in September 2019. I had for a couple of years been obsessed with making a game that reflected a healthy society, modeled a little after current Scandinavian social systems. I wanted to portray a civilization with ample access to free mental health care professionals, focus on inclusivity, free education, welfare programs and compassionate leadership. <br>
-img1: /img/portfolio/vul/together1.jpg
-description1: The idea was to explore the difficulties and excitements in such societies, despite the ample support systems. To dive into (from my perspective) a mostly untapped genre - games that focus on solving conflicts we encounter every day in more behaviourally realistic, non-violent ways. <br> <br>What can we do to feel included? How do we bond socially with others? How can we help someone who is unwell while also taking care of ourselves? Which way can we handle our interpersonal conflicts? These are very difficult questions with complicated and nuanced answers. Therefore, they're such interesting concepts to explore in games to me! 💚
+description: I wanted to make the world "open world" (in hindsight that wasn't a great decision as it introduces a massive amount of scope). I played around with various ways to do this. I tested out Unity's WorldStreamer, then tried building the world in 3D (see gif above) and ultimately settled for using the Unity 2D tilemap-system and splitting the world into squares that would load as you approached them.
+img1: /img/portfolio/vul/MapBiomesAndTown.jpg
+description1: In the image above you see my sketch of the 2D world map split into squares. Biomes and cities are marked.
 ---

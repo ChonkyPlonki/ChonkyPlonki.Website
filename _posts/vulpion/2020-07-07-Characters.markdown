@@ -28,9 +28,6 @@ gallery:
   - image: "/img/portfolio/vul/workinonomneandplonks.png"
     label: Omne and Plonks, a couple
     description: "This is a couple in Vulpion. They are an alien species and have shapes across their nose and cheeks. I specifically wanted to make an alien desirable female couple that had 'alien' features that don't make them 'more' conventionally attractive. I've often found that alien woman that are portrayed in positive lights get 'alien features' that make them 'more conventionally attractive'. Taller, thinner waists, abnormally large eyes (like avatar) etc. So I wanted to go against that!"
-  - image: "/img/portfolio/vul/wigandsnoutbounce.gif"
-    label: Character Equipment
-    description: "The idea was that each character could equip wigs and clothes. This is a video of when I was testing that the wigs would look good and bouncy when equipped!"
   - image: "/img/portfolio/vul/Villager Expressions - emotes.jpg"
     label: Villagers' expressions
     description: "This is a sketch of one of the villager's possible expressions."

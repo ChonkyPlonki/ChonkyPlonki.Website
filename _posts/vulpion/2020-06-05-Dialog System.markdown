@@ -7,7 +7,17 @@ modal-id: vulpiondialog
 date: 2020-07-05
 img: /img/portfolio/vul/DialogExample.gif
 alt: image-alt
-description: This game was a one woman passion project that began in September 2019. I had for a couple of years been obsessed with making a game that reflected a healthy society, modeled a little after current Scandinavian social systems. I wanted to portray a civilization with ample access to free mental health care professionals, focus on inclusivity, free education, welfare programs and compassionate leadership. <br>
-img1: /img/portfolio/vul/together1.jpg
-description1: The idea was to explore the difficulties and excitements in such societies, despite the ample support systems. To dive into (from my perspective) a mostly untapped genre - games that focus on solving conflicts we encounter every day in more behaviourally realistic, non-violent ways. <br> <br>What can we do to feel included? How do we bond socially with others? How can we help someone who is unwell while also taking care of ourselves? Which way can we handle our interpersonal conflicts? These are very difficult questions with complicated and nuanced answers. Therefore, they're such interesting concepts to explore in games to me! 💚
+description: For the dialog system I experimented with various looks, sounds and structures. I wanted the portraits to be animated and show various emotes (which adds significant scope). I also explored having a little "emote"-internal dialog that would pop up when the player was feeling certain things. You can see more in the gallery below. <br> I also played with having individual sounds for all letters of the alphabet to play when the characters spoke, a little like Animal Crossing. In the video below you can hear this effect.
+mp4-title: "Early Dialog Sound Prototype"
+mp4-video: "vids/portfolio/Vulpion/earlydialogwithletterindialog.mp4"
+gallery:
+  - image: "/img/portfolio/vul/dialog1.gif"
+    label: Animated Portraits
+    description: "Here you can see the Animated portrait effect that I implemented as a character speaks"
+  - image: "/img/portfolio/vul/dialog2.gif"
+    label: Customized Portraits
+    description: "As the player can be customized the portraits needed to be customized as well. In this gif you can see me toggling between a short snout and a long snout testing the solution, so that the snout would correspond to the choice the player made."
+  - image: "/img/portfolio/vul/DialogExample.gif"
+    label: Inner voice box
+    description: "This displays the inner voice box I implemented for the dialog."
 ---

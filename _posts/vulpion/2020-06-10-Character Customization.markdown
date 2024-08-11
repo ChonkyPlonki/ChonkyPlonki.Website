@@ -7,7 +7,24 @@ modal-id: vulpioncharactercustomization
 date: 2020-06-10
 img: /img/portfolio/vul/hulda-gnodima-stats-customization-concept-with-opals.jpg
 alt: image-alt
-description: This game was a one woman passion project that began in September 2019. I had for a couple of years been obsessed with making a game that reflected a healthy society, modeled a little after current Scandinavian social systems. I wanted to portray a civilization with ample access to free mental health care professionals, focus on inclusivity, free education, welfare programs and compassionate leadership. <br>
-img1: /img/portfolio/vul/together1.jpg
-description1: The idea was to explore the difficulties and excitements in such societies, despite the ample support systems. To dive into (from my perspective) a mostly untapped genre - games that focus on solving conflicts we encounter every day in more behaviourally realistic, non-violent ways. <br> <br>What can we do to feel included? How do we bond socially with others? How can we help someone who is unwell while also taking care of ourselves? Which way can we handle our interpersonal conflicts? These are very difficult questions with complicated and nuanced answers. Therefore, they're such interesting concepts to explore in games to me! 💚
+description: I am a little obsessed with customization and worked to implement extensive body and clothing customization into the game. See more details below.
+gallery:
+  - image: "/img/portfolio/vul/wigandsnoutbounce.gif"
+    label: Character Aesthethic Equipment
+    description: "The idea was that each character could equip wigs and clothes. This is a video of when I was testing that the wigs would look good and bouncy when equipped!"
+  - image: "/img/portfolio/vul/Customize BODY.jpg"
+    label: Customize Body
+    description: "This is the UI for customizing the player's Vulp's body."
+  - image: "/img/portfolio/vul/Customize HEAD.jpg"
+    label: Customize Head
+    description: "This is the UI for customizing the player's Vulp's head."
+  - image: "/img/portfolio/vul/Customize PAW.jpg"
+    label: Customize Paws
+    description: "This is the UI for customizing the player's Vulp's paws."
+  - image: "/img/portfolio/vul/hulda-gnodima-stats-customization-concept-with-opals.jpg"
+    label: Customize Skills
+    description: "This is the UI for customizing the player's Vulp's stats. You would put small gems into containers to symbolize which skills you were most profficient in."
+  - image: "/img/portfolio/vul/bagrotation.gif" 
+    label: Equipment
+    description: "This gif shows as I was working on the equipped bag and how it would look as the character rotated. Each equipment-item had to be painted in 5 angles (up, upper left, left, lower left, down) to get the character to be able to do a smooth 360 rotation. The upper left, left and lower left images were mirrored to the the right-side of the rotation."
 ---

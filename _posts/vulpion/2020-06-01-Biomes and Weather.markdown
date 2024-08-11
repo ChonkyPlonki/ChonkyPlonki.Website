@@ -1,13 +1,27 @@
 ---
 layout: default
-project-title: Biomes and Weather
+project-title: World, Biomes and Weather
 projectcategory: vulpion
 url: vulpion
 modal-id: vulpionbiomes
 date: 2020-06-01
 img: /img/portfolio/vul/Biomes Overview2.jpg
 alt: image-alt
-description: This game was a one woman passion project that began in September 2019. I had for a couple of years been obsessed with making a game that reflected a healthy society, modeled a little after current Scandinavian social systems. I wanted to portray a civilization with ample access to free mental health care professionals, focus on inclusivity, free education, welfare programs and compassionate leadership. <br>
-img1: /img/portfolio/vul/together1.jpg
-description1: The idea was to explore the difficulties and excitements in such societies, despite the ample support systems. To dive into (from my perspective) a mostly untapped genre - games that focus on solving conflicts we encounter every day in more behaviourally realistic, non-violent ways. <br> <br>What can we do to feel included? How do we bond socially with others? How can we help someone who is unwell while also taking care of ourselves? Which way can we handle our interpersonal conflicts? These are very difficult questions with complicated and nuanced answers. Therefore, they're such interesting concepts to explore in games to me! 💚
+description: I adore 'odd' colors, strange looking plants, water in all colors and shimmering, holographic effects. So I wanted to incorporate these aspects into Vulpion's biomes. The image above shows the six different biomes in Vulpion. When I painted and designed these, one of the things I thought of was that I wanted the biomes to look very different from one another, and so they all have distinct color-schemes. Additionally, I wanted to move away from classical biomes that are common in games (like snow, rocky, grassy, desert etc.). I love classical biomes, however I thought there were a lot of interesting new biomes and aspects to explore.
+gallery:
+  - image: "/img/portfolio/vul/BuildingsSMALL.jpg"
+    label: Ralua
+    description: "This is the design sketch I made of the buildings in the first city, Ralua."
+  - image: "/img/portfolio/vul/Inside sketches9.jpg"
+    label: Collage Art of Houses
+    description: "When I make design sketches I will sometimes initially make collages to help me test out colors and shapes. This image shows one such collage sketch of the inside houses of Ralue"
+  - image: "/img/portfolio/vul/MapBiomesAndTown.jpg"
+    label: World Map
+    description: "This image shows the world-map Vulpion sketch I made."
+  - image: "/img/portfolio/vul/Planting in different biomes can have different plants.jpg"
+    label: Farming in different biomes
+    description: "I made this concept of how the farming icons would look different in various biomes."
+  - image: "/img/portfolio/vul/seasons-overview6-small.jpg"
+    label: Weather
+    description: "I love the idea of exploring new types of weather, Imagining weather phenomena that may exist on other planets. So I designed the weather phenomena above for Vulpion. Unfortunately, I never got to implementing the bubble fog."
 ---
