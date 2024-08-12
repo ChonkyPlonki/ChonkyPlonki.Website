@@ -1,0 +1,131 @@
+<!-- Project Info Section -->
+<header>
+    <!-- Banner Image -->
+    <div class="banner-image-wrapper">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/territorialduck/smallBanner.png');">
+            <!-- Logo Image -->
+            <img src="{{ site.baseurl }}/img/portfolio/territorialduck/2180x720.png" alt="Vulpion Logo" class="banner-logo">
+        </div>
+    </div>
+
+<!-- Embed YouTube Video -->
+<div class="video-wrapper">
+    <iframe class="responsive-video" src="https://www.youtube.com/embed/vw075t2aMjE?si=Ic21HDVaQvPANHUx" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+    <div class="projects-container">
+        <div class="row">
+            <div class="col-lg-19">
+                <div class="projects-intro-text">
+                    <div class="project-content">
+                        <!-- Info Text Column -->
+                        <div class="info-column">
+                            <h4 class="info-title">Quick Info</h4>
+                            <ul class="info-list">
+                                <li><strong>See On Steam:</strong> <a href="https://store.steampowered.com/app/2100130/Territorial_Duck/" target="_blank" style="color: white; font-weight: bold;">Steamlink</a></li>
+                                <li><strong>Project Type:</strong> Game, vampire-like</li>
+                                <li><strong>Role:</strong> Developer, Artist</li>
+                                <li><strong>Game Engine:</strong> Unity</li>
+                                <li><strong>Status:</strong> Not completed</li>
+                                <!-- Add more details as needed -->
+                            </ul>
+                        </div>
+                        <!-- Description Column -->
+                        <div class="description-column">
+                            <span class="projects-skills">
+                                <b>TERRITORIAL DUCK</b> is an vampire-like (bullet heaven) game I initially started creating on my own. During it's development other great people have joined me.
+                                <br> The developement of the game is currently on pause, but I'm excited to get back to it!
+                                <br> <br>Below you'll find screenshots and more info.  
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Selected Screenshots Section (Moved here) -->
+<section class="selected-screenshots">
+    <div class="container">
+        <h2 class="section-title">Selected Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/territorialduck/screenshot/image_037_0047.jpg" alt="The main menu of the game." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/territorialduck/screenshot/image_016_0004.jpg" alt="The player duck as it tries to scare visitors away." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/territorialduck/screenshot/image_031_0002.jpg" alt="The player discoverig a new item." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/territorialduck/screenshot/image_003_0002.jpg" alt="The player in building mode, building prettily around their pond." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/territorialduck/screenshot/image_004_0020.jpg" alt="The screen in the game where you select if you want to scare visitors away or build around your pond." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/territorialduck/screenshot/image_014_0002.jpg" alt="The item selection screen when the player finds a bag." class="screenshot-trigger">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Modal Structure -->
+<div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
+    <div class="portfolio-modal-content">
+        <span class="portfolio-close-button">&times;</span>
+        <!-- Portfolio content goes here -->
+    </div>
+</div>
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+    <span class="miro-close-button">&times;</span>
+    <img class="modal-content" id="expandedScreenshot">
+    <div id="imageDescription"></div>
+</div>
+
+
+<script>
+    document.addEventListener('scroll', function () {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var bannerImage = document.querySelector('.banner-image');
+        bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    });
+
+    // Portfolio Modal Logic
+    document.querySelectorAll('.portfolio-link').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var modalId = this.getAttribute('href');
+            document.querySelector(modalId).style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
+        element.addEventListener('click', function() {
+            this.closest('.portfolio-modal').style.display = 'none';
+        });
+    });
+
+    // Screenshot Modal Logic
+    document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var modal = document.getElementById('screenshotModal');
+            var modalImg = document.getElementById('expandedScreenshot');
+            var descriptionText = document.getElementById('imageDescription');
+
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            descriptionText.innerHTML = this.alt;
+        });
+    });
+
+    document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
+        document.getElementById('screenshotModal').style.display = 'none';
+    });
+</script>

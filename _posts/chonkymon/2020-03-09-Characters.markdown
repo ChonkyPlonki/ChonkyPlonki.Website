@@ -19,4 +19,7 @@ gallery:
   - image: "/img/portfolio/chonkymon/ChosenBorbashka.png"
     label: Borba
     description: "Borba is the monster love interest in the game. Many games do romance in fun and interesting ways with fun characters. I've rarely seen visibly old women be desirable and romancable in games, however - so I wanted to add one myself! And so Borba was made."
+  - image: "/img/portfolio/chonkymon/20240810_105330.jpg"
+    label: First Sketch of Borba
+    description: "This was my first sketch of Borba, the love interest in the game."
 ---
