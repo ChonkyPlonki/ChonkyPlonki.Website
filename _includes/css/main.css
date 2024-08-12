@@ -299,11 +299,13 @@ section.success {
       display: flex;
       flex-flow: row wrap;
       align-items: stretch;
-      justify-content: space-between;
+      justify-content: flex-start; /* Align items to the left */
+      gap: 20px; /* Adjust spacing between items if needed */
     }
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 49%;
-      max-width: 49%;
+        flex: 1 1 calc(33.33% - 20px); /* Adjust width and spacing */
+        max-width: calc(33.33% - 20px);
+        box-sizing: border-box;
     }
   }
   @media (min-width: 960px) {
@@ -312,6 +314,7 @@ section.success {
       max-width: 32%;
     }
   }
+  
   /* A large grid might need four columns on widescreen layouts */
   /* @media (min-width: 1380px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {

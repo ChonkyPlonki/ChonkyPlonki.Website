@@ -1,0 +1,35 @@
+---
+layout: default
+project-title: Balancing
+projectcategory: theduckpond
+url: theduckpond
+modal-id: theduckpondducks
+date: 2020-07-09
+img: /img/portfolio/theduckpond/excel.png
+alt: image-alt
+description: |
+  Jonathan Hertz did all balancing in the game and did an incredible job! 
+  To easily adjust the ducks' idle numbers and see what consequences changing them and balancing them would have over time he made the excel-sheet depicted in the image above. The excel sheet has the ducks' effects boiled down to numers plotted over time. It also includes calculations that will automatically update the values if you change the idle-coin production the ducks yield. This excel sheet was invaluable as we did playtests and found the speed of unlocks too fast or too small!
+
+img1: /img/portfolio/vul/layers.jpg
+gallery:
+  - image: "/img/portfolio/vul/relaxingVulpion.gif"
+    label: Water Edge
+    description: "I wanted the edge of the water to look soft, so I made translucent sprites with a sin-wave shader to portray a soft water edge. You can see this in the gif where the edge of the water slowly rolls against the grass."
+  - image: "/img/portfolio/vul/swimming2.gif"
+    label: Horizontal Swim Animation
+    description: "This is a gif of as I was animating the player's underwater swimming animation. The animations are done with Unity's 2DAnimation tool, it's awesome! Here I am also testing the equipment system by equipping a skirt 'under water'"
+  - image: "/img/portfolio/vul/swimanim.gif"
+    label: Vertical Swim Animation
+    description: "This gif shows the process as I was animating the player swimming when they point upwards."
+  - image: "/img/portfolio/vul/Using Heightmap trying at least.gif"
+    label: How walking into water works
+    description: 
+     Because the game is in 2D and I didn't want to use 3D terrain I needed to figure out a way to have the player 'sink' into the water as the player walks out into it. I ended up using a heightmap (that's hidden to the player) that pushes the player's position up or down depending on if it's walking over white on the height map (up) or black (down). In the gif above you can see the Vulp-player bump up and down depending on the color of the texture it."
+  - image: "/img/portfolio/vul/forest fauna.jpg"
+    label: Alternative color scheme
+    description: "In one biome I wanted the water to have this deep green almost brownish color that reminds me of Swedish rich forests. I find this color scheme for cozy forests rarely used in games/media - but I find it so beautiful and calming! This image is concept art I made for that type of water for Vulpion."
+  - image: "/img/portfolio/vul/earlydivingconcept.png"
+    label: Early Diving Concept
+    description: This is one of the earliest sketches I made of how the water diving could/would look."
+---

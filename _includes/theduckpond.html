@@ -1,0 +1,164 @@
+<!-- Project Info Section -->
+<header>
+    <!-- Banner Image -->
+    <div class="banner-image-wrapper">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/theduckpond/3840x1240_v3.png');">
+            <!-- Logo Image -->
+            <img src="{{ site.baseurl }}/img/portfolio/theduckpond/1280x720 text logo.png" alt="Vulpion Logo" class="banner-logo">
+        </div>
+    </div>
+
+<!-- Embed YouTube Video -->
+<div class="video-wrapper">
+    <iframe class="responsive-video" src="https://www.youtube.com/embed/6io7ogVC2NY?si=RZ3o3slY6ZfCitar" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+    <div class="projects-container">
+        <div class="row">
+            <div class="col-lg-19">
+                <div class="projects-intro-text">
+                    <div class="project-content">
+                        <!-- Info Text Column -->
+                        <div class="info-column">
+                            <h4 class="info-title">Quick Info</h4>
+                            <ul class="info-list">
+                                <li><strong>Get On Steam:</strong> <a href="https://store.steampowered.com/app/3067180/The_Duck_Pond/" target="_blank" style="color: white; font-weight: bold;">Steamlink</a></li>
+                                <li><strong>Press Kit:</strong> <a href="https://drive.google.com/drive/folders/1yBHZLVsDqpX6ANtOZt6i2m9WJMm6p8UT?usp=sharing" target="_blank" style="color: white; font-weight: bold;">Google Drive</a></li>                                
+                                <li><strong>Project Type:</strong> Game</li>
+                                <li><strong>Role:</strong> Developer, Artist</li>
+                                <li><strong>Game Engine:</strong> Unity</li>
+                                <!-- Add more details as needed -->
+                            </ul>
+                        </div>
+                        <!-- Description Column -->
+                        <div class="description-column">
+                            <span class="projects-skills">
+                                <b>THE DUCK POND</b> is an idle clicker game I made together with the awesome <a href="https://bmandk.github.io/" target="_blank" style="color: white; font-weight: bold;">Jonathan Hertz</a>. We released it on Steam 26 July, 2024.
+                                <br> <br> We set out to make a minimal game and complete it from start to finish within 1-2 months. It was challenging as we were both working full-time at the time, but we did it and it was worth it!
+                                <br> We ended up only marketing the game for 2-3 weeks, and were very happy by how positive the reception was.
+                                <br> <br>Below you'll find screenshots and more info about The Duck Pond.  
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Selected Screenshots Section (Moved here) -->
+<section class="selected-screenshots">
+    <div class="container">
+        <h2 class="section-title">Selected Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/theduckpond/screenshot/Image Sequence_014_0003.png" alt="This screenshot shows our main menu. We made it interactive to welcome player play as soon as they opened the game." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/theduckpond/screenshot/Image Sequence_016_0010.png" alt="The game starts with your pond having been polluted by a mega corporation. This screenshot shows how the player has to clean it up for the ducks to be able to thrive." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/theduckpond/screenshot/Image Sequence_021_0015.png" alt="This screenshot shows the player's view as it has attracted a number of ducks by throwing duck-safe food into the pond." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/theduckpond/screenshot/Image Sequence_019_0003.png" alt="This screenshot shows how the player has discovered a new typ of duck, the bread duck!" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/theduckpond/screenshot/Image Sequence_021_0021.png" alt="In the game you can have the ducks move into your dilapitated hut, which is what you see in this screenshot. As more ducks move in they will fix up your hut." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/theduckpond/screenshot/Image Sequence_015_0010.png" alt="This image is from a cutscene in the very beginning where the main character old lady pets and feeds her precious ducks." class="screenshot-trigger">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container portfolio-flex-grid">
+        <!-- Portfolio Grid Title -->
+        <h2 class="portfolio-grid-title">More About The Duck Pond</h2>
+        <div class="row"></div>
+        <div class="portfolio-flex-row">
+            {% for post in site.posts %}
+            {% if post.projectcategory == "theduckpond" %}
+            <div class="portfolio-flex-item portfolio-item">
+                <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ site.baseurl }}{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+                        <div class="project-portfolio-caption">
+                            <h4>{{post.project-title}}</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Portfolio Modal Structure -->
+<div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
+    <div class="portfolio-modal-content">
+        <span class="portfolio-close-button">&times;</span>
+        <!-- Portfolio content goes here -->
+    </div>
+</div>
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+    <span class="miro-close-button">&times;</span>
+    <img class="modal-content" id="expandedScreenshot">
+    <div id="imageDescription"></div>
+</div>
+
+
+<script>
+    document.addEventListener('scroll', function () {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var bannerImage = document.querySelector('.banner-image');
+        bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    });
+
+    // Portfolio Modal Logic
+    document.querySelectorAll('.portfolio-link').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var modalId = this.getAttribute('href');
+            document.querySelector(modalId).style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
+        element.addEventListener('click', function() {
+            this.closest('.portfolio-modal').style.display = 'none';
+        });
+    });
+
+    // Screenshot Modal Logic
+    document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var modal = document.getElementById('screenshotModal');
+            var modalImg = document.getElementById('expandedScreenshot');
+            var descriptionText = document.getElementById('imageDescription');
+
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            descriptionText.innerHTML = this.alt;
+        });
+    });
+
+    document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
+        document.getElementById('screenshotModal').style.display = 'none';
+    });
+</script>
