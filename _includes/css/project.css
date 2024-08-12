@@ -249,6 +249,19 @@ header .projects-intro-text {
     line-height: 1.5;
 }
 
+#imageDescription-pink {
+    margin: 15px auto;
+    padding: 10px 20px;
+    max-width: 80%; /* Restrict width */
+    background-color: #{{site.color.secondary-dark-pink}};
+    border-radius: 10px; /* Rounded corners */
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
 .miro-close-button {
     position: absolute;
     top: 30px;
@@ -405,7 +418,15 @@ header .projects-intro-text {
     background-color: #{{site.color.secondary-dark}}; /* Dark green color */
     margin: 10px 0; /* Margin to give space around the line */
   }
-  
+
+    /* Custom styles for the horizontal line */
+.dark-green-line-pink {
+    border: 0;
+    height: 1px; /* Adjust height as needed */
+    background-color: #{{site.color.secondary-dark-pink}}; /* Dark green color */
+    margin: 10px 0; /* Margin to give space around the line */
+   }
+
   /* Custom styles for img1 */
   .custom-img1-size {
     max-width: 50%; /* Adjust this value to your preference */
@@ -590,6 +611,21 @@ header .projects-intro-text {
     margin-bottom: 20px;
 }
 
+/* Description Box Style */
+.expanded-image-overlay-pink .description {
+    color: #ffffff;
+    background-color: #{{site.color.secondary-dark-pink}}; /* Dark green with opacity */
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+    width: fit-content;
+    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
   /* Video Wrapper Styles */
   .video-wrapper {
     display: flex;
@@ -604,6 +640,16 @@ header .projects-intro-text {
     width: 100%;
     max-width: 1000px; /* Maximum width for large screens */
     border: 10px solid #{{site.color.secondary-dark}};
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Video Styles */
+.responsive-video-pink {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    max-width: 1000px; /* Maximum width for large screens */
+    border: 10px solid #{{site.color.secondary-pink}};
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -753,6 +799,22 @@ header .projects-intro-text {
 .btn.btn-default:active {
     background-color: #{{site.color.secondary}}; /* A slightly darker green for the hover state */
     border-color: #{{site.color.secondary}}; /* Matching border color on hover */
+    color: white; /* Keep the text white on hover */
+}
+
+/* Custom styling for the close button */
+.btn.btn-default-pink {
+    background-color: #{{site.color.secondary-pink}}; /* Dark green color */
+    color: white; /* Ensure the text is visible on the dark green background */
+    border-color: #{{site.color.secondary-pink}}; /* Optional: Set the border color to match the background */
+}
+
+/* Hover effect for the close button */
+.btn.btn-default-pink:hover,
+.btn.btn-default-pink:focus,
+.btn.btn-default-pink:active {
+    background-color: #{{site.color.secondary-pink}}; /* A slightly darker green for the hover state */
+    border-color: #{{site.color.secondary-pink}}; /* Matching border color on hover */
     color: white; /* Keep the text white on hover */
 }
 
