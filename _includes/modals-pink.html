@@ -114,55 +114,5 @@
 </div>
 
 <style>
-
-    /* 1. Background of the entire modal (including overlay) to be #{{ site.color.primary-pink }} */
-.portfolio-modal.modal {
-    background-color: #{{ site.color.primary-pink }};
-}
-
-.portfolio-modal.modal-dialog {
-    background-color: #{{ site.color.primary-pink }};
-}
-
-/* 4. Transparent black background when gallery images are clicked */
-.screenshot-modal {
-    background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black */
-}
-
-/* Ensuring the modal content is centered and the correct color */
-.portfolio-modal .modal-content {
-    background-color: #{{ site.color.primary-pink }};
-    color: #{{ site.color.secondary-dark-pink }};
-}
-
-/* Additional changes */
-.portfolio-modal .btn-default {
-    background-color: #{{ site.color.secondary-pink }};
-    color: white;
-    border: none;
-}
-
-.portfolio-modal .btn-default:hover {
-    background-color: darken(#{{ site.color.secondary-pink }}, 10%);
-}
-
-.custom-gallery-item .image-label {
-    color: #{{ site.color.secondary-dark-pink }};
-}
-
-#imageDescription {
-    background-color: #{{ site.color.secondary-pink }} !important;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.green-background {
-    background-color: #{{ site.color.primary-pink }} !important;
-}
-
-/* Description Box Style */
-.expanded-image-overlay .description {
-    background-color: #{{site.color.secondary-dark-pink}}; /* Dark green with opacity */
-}
+{% include css/pinkmodal.css %}
 </style>
