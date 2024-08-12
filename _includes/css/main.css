@@ -87,34 +87,6 @@ hr.star-dark:after {
     background-color: #{{site.color.primary}};
 }
 
-hr.star-light-pink {
-    border-color: #{{ site.color.secondary-pink }};
-}
-
-hr.star-light-pink:after {
-    color: #{{ site.color.secondary-pink }};
-    background-color: #{{ site.color.primary }};
-}
-
-hr.star-primary-pink {
-    border-color: #{{ site.color.secondary-pink }};
-}
-
-hr.star-primary-pink:after {
-    color: #{{ site.color.secondary-pink }};
-    background-color: #fff;
-}
-
-hr.star-dark-pink {
-    border-color: #{{ site.color.secondary-pink }};
-}
-
-hr.star-dark-pink:after {
-    color: #{{ site.color.secondary-pink }};
-    background-color: #{{site.color.primary-pink}};
-}
-
-
 .img-centered {
     margin: 0 auto;
 }
@@ -544,34 +516,11 @@ footer .footer-below {
     transform: rotate(90deg);
 }
 
-.portfolio-modal-pink .close-modal-pink .lr {
-    z-index: 1051;
-    width: 4px;
-    height: 35px;
-    margin-left: 35px;
-    background-color: #{{ site.color.secondary-pink }};
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.portfolio-modal-pink .close-modal-pink .lr .rl {
-    z-index: 1052;
-    width: 4px;
-    height: 35px;
-    background-color: #{{ site.color.secondary-pink }};
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
 .navbar-nav>.active>a {
     background-color: #{{ site.color.secondary-dark }} !important;
 }
 
-.navbar-nav-pink>.active>a {
-    background-color: #{{ site.color.secondary-dark-pink }} !important;
-}
+
 /* Fix modal mouse wheel issues */
 /* https://github.com/twbs/bootstrap/issues/16297 */
 .modal.fade.in {

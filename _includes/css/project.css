@@ -249,18 +249,6 @@ header .projects-intro-text {
     line-height: 1.5;
 }
 
-#imageDescription-pink {
-    margin: 15px auto;
-    padding: 10px 20px;
-    max-width: 80%; /* Restrict width */
-    background-color: #{{site.color.secondary-dark-pink}};
-    border-radius: 10px; /* Rounded corners */
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
 
 .miro-close-button {
     position: absolute;
@@ -799,22 +787,6 @@ header .projects-intro-text {
 .btn.btn-default:active {
     background-color: #{{site.color.secondary}}; /* A slightly darker green for the hover state */
     border-color: #{{site.color.secondary}}; /* Matching border color on hover */
-    color: white; /* Keep the text white on hover */
-}
-
-/* Custom styling for the close button */
-.btn.btn-default-pink {
-    background-color: #{{site.color.secondary-pink}}; /* Dark green color */
-    color: white; /* Ensure the text is visible on the dark green background */
-    border-color: #{{site.color.secondary-pink}}; /* Optional: Set the border color to match the background */
-}
-
-/* Hover effect for the close button */
-.btn.btn-default-pink:hover,
-.btn.btn-default-pink:focus,
-.btn.btn-default-pink:active {
-    background-color: #{{site.color.secondary-pink}}; /* A slightly darker green for the hover state */
-    border-color: #{{site.color.secondary-pink}}; /* Matching border color on hover */
     color: white; /* Keep the text white on hover */
 }
 

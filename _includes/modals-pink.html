@@ -91,13 +91,10 @@
                       onclick="expandImage(this)">
                   </div>
                 </div>
-
-
                 {% endfor %}
               </div>
             </div>
             {% endif %}
-
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
               Close</button>
           </div>
@@ -118,7 +115,7 @@
 
 <style>
 
-/* 1. Background of the entire modal (including overlay) to be #{{ site.color.primary-pink }} */
+    /* 1. Background of the entire modal (including overlay) to be #{{ site.color.primary-pink }} */
 .portfolio-modal.modal {
     background-color: #{{ site.color.primary-pink }};
 }
@@ -154,7 +151,7 @@
 }
 
 #imageDescription {
-    background-color: #{{ site.color.secondary-pink }};
+    background-color: #{{ site.color.secondary-pink }} !important;
     color: white;
     padding: 10px;
     border-radius: 5px;
