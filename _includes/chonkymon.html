@@ -10,7 +10,7 @@
 
 <!-- Embed YouTube Video -->
 <div class="video-wrapper">
-    <iframe class="responsive-video" src="https://www.youtube.com/embed/i2jGc0s_jfQ?si=GwiWFs4n-qJna8OB" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <iframe class="responsive-video-pink" src="https://www.youtube.com/embed/i2jGc0s_jfQ?si=GwiWFs4n-qJna8OB" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
     <div class="projects-container">
         <div class="row">
@@ -158,3 +158,54 @@
         document.getElementById('screenshotModal').style.display = 'none';
     });
 </script>
+
+<style>
+    /* 1. Background color for Quick Info, Description, and Trailer Video */
+    .info-column,
+    .description-column,
+    .video-wrapper {
+        background-color: #{{ site.color.primary-pink }};
+    }
+
+    /* 2. Text color for the entire page */
+    body, h1, h2, h3, h4, h5, h6, p, a {
+        color: #{{ site.color.secondary-dark-pink }};
+    }
+
+    /* 3. Border color for images in "More About The Duck Pond" */
+    .portfolio-flex-item .image-container img {
+        border: 10px solid #{{ site.color.primary-pink }};
+    }
+
+    /* Ensure the background color is applied to all elements in the section above "Selected Screenshots" */
+
+/* Target the entire header section */
+header {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* Target any divs within the header that might be overriding the background color */
+header .projects-container,
+header .row,
+header .col-lg-19,
+header .projects-intro-text,
+header .project-content {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* Add a fallback to the general container in case there's another layer */
+.banner-image-wrapper,
+.banner-image {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* Transparent white background for the labels above images */
+.project-portfolio-caption {
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    padding: 10px; /* Optional: Adjust padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+
+</style>
+
