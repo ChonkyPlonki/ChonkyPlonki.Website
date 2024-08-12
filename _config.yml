@@ -40,11 +40,21 @@ color:
   primary-rgb: "90,31,93" # old: "128,179,255"
   primary-font-color: 141f06
 
+  primary-pink: e8b0bb
+  primary-pink-rgb: 232,176,187
+  primary-pink-font-color: 1e0409
+
   secondary: 2b4019 #FD6E8A old: 502c38 
   secondary-dark: 141f06 #A2122F old: 31151e
-  secondary-dark-rgb: 18,52,86;
-  secondary-dark-rgb-transparent: 18,52,86,0.6;
+  secondary-dark-rgb: 18,52,86
+  secondary-dark-rgb-transparent: 18,52,86,0.6
   seconfary-font-color: ffffff
+
+  secondary-pink: 502c38 #FD6E8A old: 502c38 
+  secondary-dark-pink: 31151e #A2122F old: 31151e
+  secondary-dark-rgb-pink: 49,21,30
+  secondary-dark-rgb-transparent-pink: 49,21,30,0.6
+  seconfary-font-color-pink: ffffff
 
 # Footer settings
 footer:
