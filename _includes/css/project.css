@@ -599,21 +599,6 @@ header .projects-intro-text {
     margin-bottom: 20px;
 }
 
-/* Description Box Style */
-.expanded-image-overlay-pink .description {
-    color: #ffffff;
-    background-color: #{{site.color.secondary-dark-pink}}; /* Dark green with opacity */
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 80%;
-    width: fit-content;
-    word-wrap: break-word;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
   /* Video Wrapper Styles */
   .video-wrapper {
     display: flex;
