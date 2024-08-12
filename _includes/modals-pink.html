@@ -1,0 +1,168 @@
+<!-- Portfolio Modals -->
+{% for post in site.posts %}
+{% if post.category != 'portfolio' %}
+<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
+  aria-hidden="true">
+  <div class="modal-content">
+    <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+        <div class="rl"></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 green-background">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="modal-header-custom">
+                  <img src="{{ site.baseurl }}{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                  <h3>{{ post.title }}</h3>
+                  <hr class="dark-green-line">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="modal-body">
+            {% if post.description %}
+            <div class="modal-description">{{ post.description | markdownify }}</div>
+            {% endif %}
+
+            {% if post.img1 %}
+            <div class="modal-header-custom img1-container">
+              <img src="{{ site.baseurl }}{{ post.img1 }}" class="img-responsive img-centered custom-img1-size"
+                alt="{{ post.alt }}">
+            </div>
+            {% endif %}
+            {% if post.description1 %}
+            <p class="modal-description">{{ post.description1 }}</p>
+            {% endif %}
+            <ul class="list-inline item-details">
+              {% if post.client %}
+              <li>Client:
+                <strong>{{ post.client }}</strong>
+              </li>
+              {% endif %}
+              {% if post.project-date %}
+              <li>Date:
+                <strong>{{ post.project-date }}</strong>
+              </li>
+              {% endif %}
+              {% if post.category %}
+              <li>Service:
+                <strong>{{ post.category }}</strong>
+              </li>
+              {% endif %}
+            </ul>
+            <!-- MP4 Video Section -->
+            {% if post.mp4-video %}
+            <h3>{{ post.mp4-title }}</h3>
+            <div class="video-container">
+              <video controls>
+                <source src="{{ site.baseurl }}/{{ post.mp4-video }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {% endif %}
+            <!-- YouTube Video Section -->
+            {% if post.youtube-video-id %}
+            <h3>{{ post.youtube-title }}</h3>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/{{ post.youtube-video-id }}" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            {% endif %}
+            <!-- Gallery Section -->
+            {% if post.gallery %}
+            <div class="custom-gallery-container">
+              <h3 class="text-uppercase">Gallery With Further Details</h3>
+              <div class="row">
+                {% for item in post.gallery %}
+                <div class="col-md-4">
+                  <div class="custom-gallery-item">
+                    <div class="image-label">{{item.label}}</div>
+                    <img src="{{ site.baseurl }}/{{ item.image }}" class="img-fluid custom-gallery-img"
+                      alt="{{ item.description }}" data-description="{{ item.description }}"
+                      onclick="expandImage(this)">
+                  </div>
+                </div>
+
+
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+              Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+  <span class="close-button">&times;</span>
+  <img class="modal-content" id="expandedScreenshot">
+  <div id="imageDescription"></div>
+</div>
+
+<style>
+
+/* 1. Background of the entire modal (including overlay) to be #{{ site.color.primary-pink }} */
+.portfolio-modal.modal {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+.portfolio-modal.modal-dialog {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* 4. Transparent black background when gallery images are clicked */
+.screenshot-modal {
+    background-color: rgba(0, 0, 0, 0.8); /* 80% transparent black */
+}
+
+/* Ensuring the modal content is centered and the correct color */
+.portfolio-modal .modal-content {
+    background-color: #{{ site.color.primary-pink }};
+    color: #{{ site.color.secondary-dark-pink }};
+}
+
+/* Additional changes */
+.portfolio-modal .btn-default {
+    background-color: #{{ site.color.secondary-pink }};
+    color: white;
+    border: none;
+}
+
+.portfolio-modal .btn-default:hover {
+    background-color: darken(#{{ site.color.secondary-pink }}, 10%);
+}
+
+.custom-gallery-item .image-label {
+    color: #{{ site.color.secondary-dark-pink }};
+}
+
+#imageDescription {
+    background-color: #{{ site.color.secondary-pink }};
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.green-background {
+    background-color: #{{ site.color.primary-pink }} !important;
+}
+
+
+</style>
