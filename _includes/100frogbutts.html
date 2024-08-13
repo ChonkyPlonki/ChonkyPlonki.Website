@@ -1,0 +1,185 @@
+<!-- Project Info Section -->
+<header>
+    <!-- Banner Image -->
+    <div class="banner-image-wrapper">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_011_0042.jpg');">
+            <!-- Logo Image -->
+            <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/properLogo.png" alt="Logo" class="banner-logo">
+        </div>
+    </div>
+
+<!-- Embed YouTube Video -->
+<div class="video-wrapper">
+    <iframe class="responsive-video-pink" src="https://www.youtube.com/embed/ym0UMgIaDO4?si=ubtuL9f3irUTKXAn" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+    <div class="projects-container">
+        <div class="row">
+            <div class="col-lg-19">
+                <div class="projects-intro-text">
+                    <div class="project-content">
+                        <!-- Info Text Column -->
+                        <div class="info-column">
+                            <h4 class="info-title">Quick Info</h4>
+                            <ul class="info-list">
+                                 <li><strong>Project Type:</strong> Hidden Object Game</li>
+                                <li><strong>Role:</strong> Solo Project</li>
+                                <li><strong>Game Engine:</strong> Unity</li>
+                                <li><strong>Status:</strong> Not Completed</li>
+                                <!-- Add more details as needed -->
+                            </ul>
+                        </div>
+                        <!-- Description Column -->
+                        <div class="description-column">
+                            <span class="projects-skills">
+                                <b>A Hundred Frog Butts</b> is a silly hidden object game where you have to find hidden frogs in a scene by searching for their butts.
+                                <br>I was inspired by humorous Instagram and TikTok videos where artists would paint or sculpt cute fruits or animals (<a href="https://www.tiktok.com/@witchandwhimsy/video/7129654470346018090" target="_blank" style="color: white; font-weight: bold;">like this one for example of a beet</a>), then adjust the angle to show they had added a little sculpted butt to them too.
+                                <br>So this game was aimed to be a game-version of those silly videos!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Selected Screenshots Section (Moved here) -->
+<section class="selected-screenshots">
+    <div class="container">
+        <h2 class="section-title">Selected Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_009_0039.jpg" alt="Screenshot" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_010_0003.jpg" alt="Screenshot" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_011_0005.jpg" alt="Screenshot" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_009_0004.jpg" alt="Screenshot" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_009_0016.jpg" alt="Screenshot" class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/nightof100frogbutts/screenshot/image_011_0042.jpg" alt="Screenshot" class="screenshot-trigger">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Modal Structure -->
+<div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
+    <div class="portfolio-modal-content">
+        <span class="portfolio-close-button">&times;</span>
+        <!-- Portfolio content goes here -->
+    </div>
+</div>
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+    <span class="miro-close-button">&times;</span>
+    <img class="modal-content" id="expandedScreenshot">
+    <div id="imageDescription"></div>
+</div>
+
+
+<script>
+    document.addEventListener('scroll', function () {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var bannerImage = document.querySelector('.banner-image');
+        bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    });
+
+    // Portfolio Modal Logic
+    document.querySelectorAll('.portfolio-link').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var modalId = this.getAttribute('href');
+            document.querySelector(modalId).style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
+        element.addEventListener('click', function() {
+            this.closest('.portfolio-modal').style.display = 'none';
+        });
+    });
+
+    // Screenshot Modal Logic
+    document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var modal = document.getElementById('screenshotModal');
+            var modalImg = document.getElementById('expandedScreenshot');
+            var descriptionText = document.getElementById('imageDescription');
+
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            descriptionText.innerHTML = this.alt;
+        });
+    });
+
+    document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
+        document.getElementById('screenshotModal').style.display = 'none';
+    });
+</script>
+
+<style>
+    /* 1. Background color for Quick Info, Description, and Trailer Video */
+    .info-column,
+    .description-column,
+    .video-wrapper {
+        background-color: #{{ site.color.primary-pink }};
+    }
+
+    /* 2. Text color for the entire page */
+    body, h1, h2, h3, h4, h5, h6, p, a {
+        color: #{{ site.color.secondary-dark-pink }};
+    }
+
+    /* 3. Border color for images in "More About The Duck Pond" */
+    .portfolio-flex-item .image-container img {
+        border: 10px solid #{{ site.color.primary-pink }};
+    }
+
+    /* Ensure the background color is applied to all elements in the section above "Selected Screenshots" */
+
+/* Target the entire header section */
+header {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* Target any divs within the header that might be overriding the background color */
+header .projects-container,
+header .row,
+header .col-lg-19,
+header .projects-intro-text,
+header .project-content {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* Add a fallback to the general container in case there's another layer */
+.banner-image-wrapper,
+.banner-image {
+    background-color: #{{ site.color.primary-pink }};
+}
+
+/* Transparent white background for the labels above images */
+.project-portfolio-caption {
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    padding: 10px; /* Optional: Adjust padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Background color for the text under the image in the exploded view (modal) */
+#imageDescription {
+    background-color: #{{ site.color.secondary-dark-pink }};
+    color: white; /* Optional: Ensure the text is readable on the dark pink background */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+</style>
+
