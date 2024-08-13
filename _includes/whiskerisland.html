@@ -1,0 +1,131 @@
+<!-- Project Info Section -->
+<header>
+    <!-- Banner Image -->
+    <div class="banner-image-wrapper">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/whiskerisland/Image Sequence_008_0004.jpg');">
+            <!-- Logo Image -->
+            <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/Logo.png" alt="Vulpion Logo" class="banner-logo">
+        </div>
+    </div>
+
+<!-- Embed YouTube Video -->
+<div class="video-wrapper">
+    <iframe class="responsive-video" src="https://www.youtube.com/embed/MirJnU9GgJQ?si=RDtZ0Pnm4fBuWafa" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+    <div class="projects-container">
+        <div class="row">
+            <div class="col-lg-19">
+                <div class="projects-intro-text">
+                    <div class="project-content">
+                        <!-- Info Text Column -->
+                        <div class="info-column">
+                            <h4 class="info-title">Quick Info</h4>
+                            <ul class="info-list">
+                                 <li><strong>Project Type:</strong> Management Game</li>
+                                <li><strong>Role:</strong> Coder, Artist</li>
+                                <li><strong>Game Engine:</strong> Unity</li>
+                                <li><strong>Status:</strong> Not Completed</li>
+                                <!-- Add more details as needed -->
+                            </ul>
+                        </div>
+                        <!-- Description Column -->
+                        <div class="description-column">
+                            <span class="projects-skills">
+                                <b>WHISKER ISLAND</b> is a project I worked on with two other awesome developers. We decided to work on the game for 3 months and work on it ca 1-4 hours a week each.
+                                <br>We set out to make a small and cute Factorio-inspired game, as we saw there weren't many factorio-like games (probably because they are very hard to make), and additionally, not Factorio-like games that were cute.
+                                <br>We ran into performance issues as it was hard to implement the transportation belts highly optimized (without working with Unity's DOTS system or Burst etc.). 
+                                <br><br>Due to busy lives we ended up putting the project on indefinite hiatus after the 3 months, however I would love to revisit it again and make a very small game of it!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Selected Screenshots Section (Moved here) -->
+<section class="selected-screenshots">
+    <div class="container">
+        <h2 class="section-title">Selected Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/screenshot/Image Sequence_006_0025.jpg" alt="The main menu of the game." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/screenshot/Image Sequence_001_0000.jpg" alt="The player duck as it tries to scare visitors away." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/screenshot/Image Sequence_002_0007.jpg" alt="The player discoverig a new item." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/screenshot/Image Sequence_004_0002.jpg" alt="The player in building mode, building prettily around their pond." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/screenshot/Image Sequence_003_0001.jpg" alt="The screen in the game where you select if you want to scare visitors away or build around your pond." class="screenshot-trigger">
+            </div>
+            <div class="screenshot-item">
+                <img src="{{ site.baseurl }}/img/portfolio/whiskerisland/screenshot/Image Sequence_005_0006.jpg" alt="The item selection screen when the player finds a bag." class="screenshot-trigger">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Modal Structure -->
+<div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
+    <div class="portfolio-modal-content">
+        <span class="portfolio-close-button">&times;</span>
+        <!-- Portfolio content goes here -->
+    </div>
+</div>
+
+<!-- Screenshot Modal Structure -->
+<div id="screenshotModal" class="screenshot-modal">
+    <span class="miro-close-button">&times;</span>
+    <img class="modal-content" id="expandedScreenshot">
+    <div id="imageDescription"></div>
+</div>
+
+
+<script>
+    document.addEventListener('scroll', function () {
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        var bannerImage = document.querySelector('.banner-image');
+        bannerImage.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+    });
+
+    // Portfolio Modal Logic
+    document.querySelectorAll('.portfolio-link').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var modalId = this.getAttribute('href');
+            document.querySelector(modalId).style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.portfolio-close-button').forEach(function(element) {
+        element.addEventListener('click', function() {
+            this.closest('.portfolio-modal').style.display = 'none';
+        });
+    });
+
+    // Screenshot Modal Logic
+    document.querySelectorAll('.screenshot-trigger').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var modal = document.getElementById('screenshotModal');
+            var modalImg = document.getElementById('expandedScreenshot');
+            var descriptionText = document.getElementById('imageDescription');
+
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            descriptionText.innerHTML = this.alt;
+        });
+    });
+
+    document.querySelector('.screenshot-modal .miro-close-button').addEventListener('click', function() {
+        document.getElementById('screenshotModal').style.display = 'none';
+    });
+</script>
