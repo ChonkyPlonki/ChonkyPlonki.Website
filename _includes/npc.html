@@ -2,15 +2,15 @@
 <header>
     <!-- Banner Image -->
     <div class="banner-image-wrapper">
-        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/chonkymon/FokusBild_Bibl_2.png');">
+        <div class="banner-image" style="background-image: url('{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/Image Sequence_002_0010.jpg');">
             <!-- Logo Image -->
-            <img src="{{ site.baseurl }}/img/portfolio/chonkymon/librarylogo2.png" alt="Logo" class="banner-logo">
+            <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/logo.png" alt="Logo" class="banner-logo">
         </div>
     </div>
 
 <!-- Embed YouTube Video -->
 <div class="video-wrapper">
-    <iframe class="responsive-video-pink" src="https://www.youtube.com/embed/i2jGc0s_jfQ?si=GwiWFs4n-qJna8OB" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <iframe class="responsive-video-pink" src="https://www.youtube.com/embed/WJqhBYYXQKU?si=Ea3YjrnJNtybyiQZ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
     <div class="projects-container">
         <div class="row">
@@ -21,21 +21,20 @@
                         <div class="info-column">
                             <h4 class="info-title">Quick Info</h4>
                             <ul class="info-list">
-                                <li><strong>See On Steam:</strong> <a href="https://store.steampowered.com/app/1606630/Chonkymon/" target="_blank" style="color: white; font-weight: bold;">Steamlink</a></li>
-                                <li><strong>Project Type:</strong> Builder Game</li>
-                                <li><strong>Role:</strong> Solo Project</li>
+                                <li><strong>Play on Itch:</strong> <a href="https://voxlz.itch.io/nonsensical-player-chores" target="_blank" style="color: white; font-weight: bold;">Steamlink</a></li>
+                                <li><strong>Project Type:</strong> Management Game (gamejam)</li>
+                                <li><strong>Role:</strong> Artist, Coder</li>
                                 <li><strong>Game Engine:</strong> Unity</li>
-                                <li><strong>Status:</strong> Not Completed</li>
                                 <!-- Add more details as needed -->
                             </ul>
                         </div>
                         <!-- Description Column -->
                         <div class="description-column">
                             <span class="projects-skills">
-                                <b>CHONKYMON</b> is an idle clicker game I made together with the awesome <a href="https://bmandk.github.io/" target="_blank" style="color: white; font-weight: bold;">Jonathan Hertz</a>. We released it on Steam 26 July, 2024.
-                                <br> <br> We set out to make a minimal game and complete it from start to finish within 1-2 months. We were both working full-time at the time so it was very challenging, but we did it and it was worth it!
-                                <br> We ended up having the game as "To be released" on Steam for only 2-3 weeks before publishing, and only marketed it for that short time. We were very happy by how positive the reception was.
-                                <br> <br>Below you'll find screenshots and more info about The Duck Pond.  
+                                <b>Nonsensical Player Chores</b> is a gamejam game I made together with five other super talented and cool people for the  <a href="https://itch.io/jam/gmtk-2023" target="_blank" style="color: white; font-weight: bold;">GMTKJam 2023</a>. 
+                                <br>All of us were spread across Sweden and England and created this game over 2 days remotely together.
+                                <br>We ended up scoring  in the top 10 % of all teams who participated in GMTKJam which was really cool!
+                                <br>
                             </span>
                         </div>
                     </div>
@@ -51,58 +50,26 @@
         <h2 class="section-title">Selected Screenshots</h2>
         <div class="screenshot-grid">
             <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/chonkymon/screenshot/Main screen.png" alt="Screenshot" class="screenshot-trigger">
+                <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/screenshot/Screenshot 2024-08-13 093858.png" alt="Screenshot" class="screenshot-trigger">
             </div>
             <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/chonkymon/screenshot/Builtnight.png" alt="Screenshot" class="screenshot-trigger">
+                <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/screenshot/Screenshot 2024-08-13 094022.png" alt="Screenshot" class="screenshot-trigger">
             </div>
             <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/chonkymon/screenshot/Built.png" alt="Screenshot" class="screenshot-trigger">
+                <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/screenshot/Screenshot 2024-08-13 093928.png" alt="Screenshot" class="screenshot-trigger">
             </div>
             <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/chonkymon/screenshot/chosen.jpg" alt="Screenshot" class="screenshot-trigger">
+                <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/screenshot/Screenshot 2024-08-13 094109.png" alt="Screenshot" class="screenshot-trigger">
             </div>
             <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/chonkymon/screenshot/screenshot5.png" alt="Screenshot" class="screenshot-trigger">
+                <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/screenshot/Screenshot 2024-08-13 093911.png" alt="Screenshot" class="screenshot-trigger">
             </div>
             <div class="screenshot-item">
-                <img src="{{ site.baseurl }}/img/portfolio/chonkymon/screenshot/Borbaask2.png" alt="Screenshot" class="screenshot-trigger">
+                <img src="{{ site.baseurl }}/img/portfolio/Nonsensical Player Chores/screenshot/Screenshot 2024-08-13 094010.png" alt="Screenshot" class="screenshot-trigger">
             </div>
         </div>
     </div>
 </section>
-
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
-    <div class="container portfolio-flex-grid">
-        <!-- Portfolio Grid Title -->
-        <h2 class="portfolio-grid-title">More About The Duck Pond</h2>
-        <div class="row"></div>
-        <div class="portfolio-flex-row">
-            {% for post in site.posts %}
-            {% if post.projectcategory == "chonkymon" %}
-            <div class="portfolio-flex-item portfolio-item">
-                <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="{{ site.baseurl }}{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-                        <div class="project-portfolio-caption">
-                            <h4>{{post.project-title}}</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-
 
 <!-- Portfolio Modal Structure -->
 <div id="portfolioModal-{{ post.modal-id }}" class="portfolio-modal">
