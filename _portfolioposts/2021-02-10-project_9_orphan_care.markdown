@@ -1,6 +1,6 @@
 ---
 project-title: Baby Orphan Care
-projectcategory: portfolio
+projectcategory: portfolioTEMPORARILYDISABLED
 img: "/orphancare/10.png"
 internalurl: /orphancare
 modal-id: orphancareportfolio
