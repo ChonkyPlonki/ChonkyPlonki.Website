@@ -13,7 +13,4 @@ gallery:
   - image: "/img/portfolio/theduckpond/jonathan throw food sketch flow graph.png"
     label: Early UI sketch
     description: "Jonathan (the awesome person I made this game with) made this sketch early on for how the player could interact with the UI to throw out food to the ducks. This ended up being the way we actually did implement the food-throwing UI until the end."
-  - image: "/img/portfolio/vul/swimming2.gif"
-    label: Horizontal Swim Animation
-    description: "This is a gif of as I was animating the player's underwater swimming animation. The animations are done with Unity's 2DAnimation tool, it's awesome! Here I am also testing the equipment system by equipping a skirt 'under water'"
 ---
